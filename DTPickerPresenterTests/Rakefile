@@ -1,5 +1,5 @@
-workspace_file = "DTPickerPresenterTests.xcworkspace"
-scheme_name = "DTPickerPresenterTests"
+workspace_file = "DTPickerPresenter.xcworkspace"
+scheme_name = "DTPickerPresenterExample"
  
 def run(command, min_exit_status = 0)
   puts "Executing: `#{command}`"

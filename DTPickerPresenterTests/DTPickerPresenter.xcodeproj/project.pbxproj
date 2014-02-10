@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0736F51FB67148278871C73F /* libPods-DTPickerPresenterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20BF89A3F7814F11AE6EFC1D /* libPods-DTPickerPresenterTests.a */; };
+		412DA0F0123B42018D91BDAE /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BED449838F47B6899DB34A /* libPods-Specs.a */; };
 		AA1C789118A9024E00DC8AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA1C788F18A9024E00DC8AD1 /* InfoPlist.strings */; };
 		AA1C78BB18A9026C00DC8AD1 /* DTPickerInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78B718A9026C00DC8AD1 /* DTPickerInputView.m */; };
 		AA1C78BC18A9026C00DC8AD1 /* DTPickerInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1C78B818A9026C00DC8AD1 /* DTPickerInputView.xib */; };
@@ -34,7 +34,8 @@
 
 /* Begin PBXFileReference section */
 		20BF89A3F7814F11AE6EFC1D /* libPods-DTPickerPresenterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DTPickerPresenterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DTPickerPresenterTests.xcconfig"; path = "Pods/Pods-DTPickerPresenterTests.xcconfig"; sourceTree = "<group>"; };
+		29BED449838F47B6899DB34A /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F274B74E3843D79AA3A99E /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTPickerPresenterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C789018A9024E00DC8AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA1C789E18A9024E00DC8AD1 /* DTPickerPresenter.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTPickerPresenter.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0736F51FB67148278871C73F /* libPods-DTPickerPresenterTests.a in Frameworks */,
+				412DA0F0123B42018D91BDAE /* libPods-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				20BF89A3F7814F11AE6EFC1D /* libPods-DTPickerPresenterTests.a */,
+				29BED449838F47B6899DB34A /* libPods-Specs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,8 +96,8 @@
 				AA1C788C18A9024E00DC8AD1 /* Example */,
 				AA1C78A518A9024E00DC8AD1 /* Specs */,
 				AA1C788418A9024E00DC8AD1 /* Products */,
-				240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */,
 				2FF36CB3FA494B13B03F633F /* Frameworks */,
+				95F274B74E3843D79AA3A99E /* Pods-Specs.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-DTPickerPresenterTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E7B2A0C9689E4D55BD927E40 /* Check Pods Manifest.lock */ = {
@@ -456,7 +458,7 @@
 		};
 		AA1C78B318A9024E00DC8AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */;
+			baseConfigurationReference = 95F274B74E3843D79AA3A99E /* Pods-Specs.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DTPickerPresenterExample.app/DTPickerPresenterExample";
@@ -480,7 +482,7 @@
 		};
 		AA1C78B418A9024E00DC8AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */;
+			baseConfigurationReference = 95F274B74E3843D79AA3A99E /* Pods-Specs.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DTPickerPresenterExample.app/DTPickerPresenterExample";
