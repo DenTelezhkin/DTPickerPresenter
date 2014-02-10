@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-               BuildableName = "DTPickerPresenterTests.app"
+               BuildableName = "DTPickerPresenterExample.app"
                BlueprintName = "DTPickerPresenterExample"
                ReferencedContainer = "container:DTPickerPresenterTests.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA1C789D18A9024E00DC8AD1"
-               BuildableName = "DTPickerPresenterTestsTests.xctest"
+               BuildableName = "DTPickerPresenterTests.xctest"
                BlueprintName = "DTPickerPresenterTests"
                ReferencedContainer = "container:DTPickerPresenterTests.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-            BuildableName = "DTPickerPresenterTests.app"
+            BuildableName = "DTPickerPresenterExample.app"
             BlueprintName = "DTPickerPresenterExample"
             ReferencedContainer = "container:DTPickerPresenterTests.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-            BuildableName = "DTPickerPresenterTests.app"
+            BuildableName = "DTPickerPresenterExample.app"
             BlueprintName = "DTPickerPresenterExample"
             ReferencedContainer = "container:DTPickerPresenterTests.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-            BuildableName = "DTPickerPresenterTests.app"
+            BuildableName = "DTPickerPresenterExample.app"
             BlueprintName = "DTPickerPresenterExample"
             ReferencedContainer = "container:DTPickerPresenterTests.xcodeproj">
          </BuildableReference>

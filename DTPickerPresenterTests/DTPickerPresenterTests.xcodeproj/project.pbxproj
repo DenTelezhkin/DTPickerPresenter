@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2194C789D3AB40D79E08F312 /* libPods-DTPickerPresenterTestsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DED472081FF49F383157484 /* libPods-DTPickerPresenterTestsTests.a */; };
+		0736F51FB67148278871C73F /* libPods-DTPickerPresenterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20BF89A3F7814F11AE6EFC1D /* libPods-DTPickerPresenterTests.a */; };
 		AA1C789118A9024E00DC8AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA1C788F18A9024E00DC8AD1 /* InfoPlist.strings */; };
 		AA1C78BB18A9026C00DC8AD1 /* DTPickerInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78B718A9026C00DC8AD1 /* DTPickerInputView.m */; };
 		AA1C78BC18A9026C00DC8AD1 /* DTPickerInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1C78B818A9026C00DC8AD1 /* DTPickerInputView.xib */; };
@@ -31,8 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6DED472081FF49F383157484 /* libPods-DTPickerPresenterTestsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DTPickerPresenterTestsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CF9169CF5044BE8BBD15041 /* Pods-DTPickerPresenterTestsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DTPickerPresenterTestsTests.xcconfig"; path = "Pods/Pods-DTPickerPresenterTestsTests.xcconfig"; sourceTree = "<group>"; };
+		20BF89A3F7814F11AE6EFC1D /* libPods-DTPickerPresenterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DTPickerPresenterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DTPickerPresenterTests.xcconfig"; path = "Pods/Pods-DTPickerPresenterTests.xcconfig"; sourceTree = "<group>"; };
 		AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTPickerPresenterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C789018A9024E00DC8AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA1C789E18A9024E00DC8AD1 /* DTPickerPresenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTPickerPresenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,17 +67,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2194C789D3AB40D79E08F312 /* libPods-DTPickerPresenterTestsTests.a in Frameworks */,
+				0736F51FB67148278871C73F /* libPods-DTPickerPresenterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9A0C6B58DF5C4E40AD66D19F /* Frameworks */ = {
+		2FF36CB3FA494B13B03F633F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6DED472081FF49F383157484 /* libPods-DTPickerPresenterTestsTests.a */,
+				20BF89A3F7814F11AE6EFC1D /* libPods-DTPickerPresenterTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -89,8 +89,8 @@
 				AA1C788C18A9024E00DC8AD1 /* DTPickerPresenterTests */,
 				AA1C78A518A9024E00DC8AD1 /* DTPickerPresenterSpecs */,
 				AA1C788418A9024E00DC8AD1 /* Products */,
-				9CF9169CF5044BE8BBD15041 /* Pods-DTPickerPresenterTestsTests.xcconfig */,
-				9A0C6B58DF5C4E40AD66D19F /* Frameworks */,
+				240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */,
+				2FF36CB3FA494B13B03F633F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,11 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA1C78B218A9024E00DC8AD1 /* Build configuration list for PBXNativeTarget "DTPickerPresenterTests" */;
 			buildPhases = (
-				695497BE0C8940ADA1B64B01 /* Check Pods Manifest.lock */,
+				E7B2A0C9689E4D55BD927E40 /* Check Pods Manifest.lock */,
 				AA1C789A18A9024E00DC8AD1 /* Sources */,
 				AA1C789B18A9024E00DC8AD1 /* Frameworks */,
 				AA1C789C18A9024E00DC8AD1 /* Resources */,
-				9FFA3AEB27F24F279D7027F3 /* Copy Pods Resources */,
+				7EC8D12A98AD4A77BA2287E7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,7 +262,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		695497BE0C8940ADA1B64B01 /* Check Pods Manifest.lock */ = {
+		7EC8D12A98AD4A77BA2287E7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-DTPickerPresenterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7B2A0C9689E4D55BD927E40 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,21 +290,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9FFA3AEB27F24F279D7027F3 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-DTPickerPresenterTestsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -445,10 +445,10 @@
 		};
 		AA1C78B318A9024E00DC8AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CF9169CF5044BE8BBD15041 /* Pods-DTPickerPresenterTestsTests.xcconfig */;
+			baseConfigurationReference = 240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DTPickerPresenterTests.app/DTPickerPresenterTests";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DTPickerPresenterExample.app/DTPickerPresenterExample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -469,10 +469,10 @@
 		};
 		AA1C78B418A9024E00DC8AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CF9169CF5044BE8BBD15041 /* Pods-DTPickerPresenterTestsTests.xcconfig */;
+			baseConfigurationReference = 240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DTPickerPresenterTests.app/DTPickerPresenterTests";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DTPickerPresenterExample.app/DTPickerPresenterExample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
