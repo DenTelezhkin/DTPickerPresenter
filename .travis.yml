@@ -2,6 +2,7 @@ language: objective-c
 
 before_install:
   - sudo gem install xcpretty --no-document --quiet
+  - sudo gem install cocoapods --no-document --quiet
   - cd DTPickerPresenterTests
     
 script: rake
