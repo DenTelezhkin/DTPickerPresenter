@@ -4,3 +4,7 @@ DTPickerPresenter
 =================
 
 Universal solution for presenting UIPickerViews
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DenHeadless/dtpickerpresenter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
