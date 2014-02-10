@@ -18,6 +18,8 @@
 		AA1C78CB18A904FC00DC8AD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78CA18A904FC00DC8AD1 /* main.m */; };
 		AA1C78CD18A9051000DC8AD1 /* DTPickerPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78CC18A9051000DC8AD1 /* DTPickerPresenterTests.m */; };
 		AA1C78D418A9051C00DC8AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA1C78D118A9051C00DC8AD1 /* InfoPlist.strings */; };
+		AA64F2AB18A90B9A006E3455 /* PickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA64F2A918A90B9A006E3455 /* PickerController.m */; };
+		AA64F2AC18A90B9A006E3455 /* PickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA64F2AA18A90B9A006E3455 /* PickerController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 		240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DTPickerPresenterTests.xcconfig"; path = "Pods/Pods-DTPickerPresenterTests.xcconfig"; sourceTree = "<group>"; };
 		AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTPickerPresenterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C789018A9024E00DC8AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AA1C789E18A9024E00DC8AD1 /* DTPickerPresenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTPickerPresenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1C789E18A9024E00DC8AD1 /* DTPickerPresenter.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTPickerPresenter.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C78B618A9026C00DC8AD1 /* DTPickerInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPickerInputView.h; path = ../DTPickerPresenter/DTPickerInputView.h; sourceTree = "<group>"; };
 		AA1C78B718A9026C00DC8AD1 /* DTPickerInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerInputView.m; path = ../DTPickerPresenter/DTPickerInputView.m; sourceTree = "<group>"; };
 		AA1C78B818A9026C00DC8AD1 /* DTPickerInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTPickerInputView.xib; path = ../DTPickerPresenter/DTPickerInputView.xib; sourceTree = "<group>"; };
@@ -51,8 +53,11 @@
 		AA1C78CA18A904FC00DC8AD1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DTPickerPresenterExample/main.m; sourceTree = SOURCE_ROOT; };
 		AA1C78CC18A9051000DC8AD1 /* DTPickerPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerPresenterTests.m; path = DTPickerPresenterTests/Specs/DTPickerPresenterTests.m; sourceTree = SOURCE_ROOT; };
 		AA1C78CE18A9051C00DC8AD1 /* DTPickerPresenterSpecs.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPickerPresenterSpecs.pch; path = DTPickerPresenterTests/DTPickerPresenterSpecs.pch; sourceTree = SOURCE_ROOT; };
-		AA1C78CF18A9051C00DC8AD1 /* DTPickerPresenterTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DTPickerPresenterTests-Info.plist"; path = "DTPickerPresenterTests/DTPickerPresenterTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AA1C78CF18A9051C00DC8AD1 /* DTPickerPresenter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DTPickerPresenter-Info.plist"; path = "DTPickerPresenterTests/DTPickerPresenter-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AA1C78D218A9051C00DC8AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		AA64F2A818A90B9A006E3455 /* PickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickerController.h; path = DTPickerPresenterExample/PickerController.h; sourceTree = SOURCE_ROOT; };
+		AA64F2A918A90B9A006E3455 /* PickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickerController.m; path = DTPickerPresenterExample/PickerController.m; sourceTree = SOURCE_ROOT; };
+		AA64F2AA18A90B9A006E3455 /* PickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PickerController.xib; path = DTPickerPresenterExample/PickerController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				AA1C78B518A9025400DC8AD1 /* DTPickerPresenter */,
-				AA1C788C18A9024E00DC8AD1 /* DTPickerPresenterTests */,
-				AA1C78A518A9024E00DC8AD1 /* DTPickerPresenterSpecs */,
+				AA1C788C18A9024E00DC8AD1 /* Example */,
+				AA1C78A518A9024E00DC8AD1 /* Specs */,
 				AA1C788418A9024E00DC8AD1 /* Products */,
 				240AD9D7E81743A39EE9669C /* Pods-DTPickerPresenterTests.xcconfig */,
 				2FF36CB3FA494B13B03F633F /* Frameworks */,
@@ -98,19 +103,23 @@
 			isa = PBXGroup;
 			children = (
 				AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */,
-				AA1C789E18A9024E00DC8AD1 /* DTPickerPresenterTests.xctest */,
+				AA1C789E18A9024E00DC8AD1 /* DTPickerPresenter.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA1C788C18A9024E00DC8AD1 /* DTPickerPresenterTests */ = {
+		AA1C788C18A9024E00DC8AD1 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				AA1C78C218A904E700DC8AD1 /* AppDelegate.h */,
 				AA1C78C318A904E700DC8AD1 /* AppDelegate.m */,
 				AA1C78C418A904E700DC8AD1 /* Images.xcassets */,
 				AA1C788D18A9024E00DC8AD1 /* Supporting Files */,
+				AA64F2A818A90B9A006E3455 /* PickerController.h */,
+				AA64F2A918A90B9A006E3455 /* PickerController.m */,
+				AA64F2AA18A90B9A006E3455 /* PickerController.xib */,
 			);
+			name = Example;
 			path = DTPickerPresenterTests;
 			sourceTree = "<group>";
 		};
@@ -125,13 +134,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AA1C78A518A9024E00DC8AD1 /* DTPickerPresenterSpecs */ = {
+		AA1C78A518A9024E00DC8AD1 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
 				AA1C78CC18A9051000DC8AD1 /* DTPickerPresenterTests.m */,
 				AA1C78A618A9024E00DC8AD1 /* Supporting Files */,
 			);
-			name = DTPickerPresenterSpecs;
+			name = Specs;
 			path = DTPickerPresenterTestsTests;
 			sourceTree = "<group>";
 		};
@@ -139,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				AA1C78CE18A9051C00DC8AD1 /* DTPickerPresenterSpecs.pch */,
-				AA1C78CF18A9051C00DC8AD1 /* DTPickerPresenterTests-Info.plist */,
+				AA1C78CF18A9051C00DC8AD1 /* DTPickerPresenter-Info.plist */,
 				AA1C78D018A9051C00DC8AD1 /* en.lproj */,
 			);
 			name = "Supporting Files";
@@ -188,9 +197,9 @@
 			productReference = AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AA1C789D18A9024E00DC8AD1 /* DTPickerPresenterTests */ = {
+		AA1C789D18A9024E00DC8AD1 /* Specs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA1C78B218A9024E00DC8AD1 /* Build configuration list for PBXNativeTarget "DTPickerPresenterTests" */;
+			buildConfigurationList = AA1C78B218A9024E00DC8AD1 /* Build configuration list for PBXNativeTarget "Specs" */;
 			buildPhases = (
 				E7B2A0C9689E4D55BD927E40 /* Check Pods Manifest.lock */,
 				AA1C789A18A9024E00DC8AD1 /* Sources */,
@@ -203,9 +212,9 @@
 			dependencies = (
 				AA1C78A418A9024E00DC8AD1 /* PBXTargetDependency */,
 			);
-			name = DTPickerPresenterTests;
+			name = Specs;
 			productName = DTPickerPresenterTestsTests;
-			productReference = AA1C789E18A9024E00DC8AD1 /* DTPickerPresenterTests.xctest */;
+			productReference = AA1C789E18A9024E00DC8AD1 /* DTPickerPresenter.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AA1C787E18A9024E00DC8AD1 /* Build configuration list for PBXProject "DTPickerPresenterTests" */;
+			buildConfigurationList = AA1C787E18A9024E00DC8AD1 /* Build configuration list for PBXProject "DTPickerPresenter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -235,7 +244,7 @@
 			projectRoot = "";
 			targets = (
 				AA1C788218A9024E00DC8AD1 /* DTPickerPresenterExample */,
-				AA1C789D18A9024E00DC8AD1 /* DTPickerPresenterTests */,
+				AA1C789D18A9024E00DC8AD1 /* Specs */,
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +257,7 @@
 				AA1C78C618A904E700DC8AD1 /* Images.xcassets in Resources */,
 				AA1C789118A9024E00DC8AD1 /* InfoPlist.strings in Resources */,
 				AA1C78BC18A9026C00DC8AD1 /* DTPickerInputView.xib in Resources */,
+				AA64F2AC18A90B9A006E3455 /* PickerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +312,7 @@
 				AA1C78CB18A904FC00DC8AD1 /* main.m in Sources */,
 				AA1C78C018A9029A00DC8AD1 /* UIView+LoadFromXib.m in Sources */,
 				AA1C78BB18A9026C00DC8AD1 /* DTPickerInputView.m in Sources */,
+				AA64F2AB18A90B9A006E3455 /* PickerController.m in Sources */,
 				AA1C78BD18A9026C00DC8AD1 /* DTPickerViewPresenter.m in Sources */,
 				AA1C78C518A904E700DC8AD1 /* AppDelegate.m in Sources */,
 			);
@@ -460,8 +471,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "DTPickerPresenterTests/DTPickerPresenterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "DTPickerPresenterTests/DTPickerPresenter-Info.plist";
+				PRODUCT_NAME = DTPickerPresenter;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -480,8 +491,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DTPickerPresenterTests/DTPickerPresenterSpecs.pch;
-				INFOPLIST_FILE = "DTPickerPresenterTests/DTPickerPresenterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "DTPickerPresenterTests/DTPickerPresenter-Info.plist";
+				PRODUCT_NAME = DTPickerPresenter;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -490,7 +501,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA1C787E18A9024E00DC8AD1 /* Build configuration list for PBXProject "DTPickerPresenterTests" */ = {
+		AA1C787E18A9024E00DC8AD1 /* Build configuration list for PBXProject "DTPickerPresenter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA1C78AD18A9024E00DC8AD1 /* Debug */,
@@ -508,7 +519,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA1C78B218A9024E00DC8AD1 /* Build configuration list for PBXNativeTarget "DTPickerPresenterTests" */ = {
+		AA1C78B218A9024E00DC8AD1 /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA1C78B318A9024E00DC8AD1 /* Debug */,
