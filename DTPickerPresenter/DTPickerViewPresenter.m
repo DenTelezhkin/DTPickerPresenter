@@ -29,7 +29,7 @@
 {
     if (!_pickerView)
     {
-        _pickerView = [[UIPickerView alloc] init];
+        _pickerView = [UIPickerView new];
         _pickerView.dataSource = self.dataSource;
         _pickerView.delegate = self.dataSource;
     }
@@ -40,7 +40,7 @@
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSIndexPath * selectedIndexPath = [[NSIndexPath alloc] init];
+    NSIndexPath * selectedIndexPath = [NSIndexPath new];
 
     for (int component = 0; component<self.pickerView.numberOfComponents; component++)
     {
