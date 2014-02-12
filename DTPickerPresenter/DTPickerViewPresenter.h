@@ -22,6 +22,8 @@ typedef void(^DTPickerViewPresenterCompletionBlock)(NSArray * selectedComponents
 
 @property (nonatomic, weak) UITextField * textFieldWithPicker;
 
+@property (nonatomic, retain) UIPickerView * pickerView;
+
 @property (nonatomic, copy) DTPickerViewPresenterCompletionBlock completionBlock;
 
 @end

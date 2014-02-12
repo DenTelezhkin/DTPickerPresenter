@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerController">
             <connections>
+                <outlet property="datePickerTextField" destination="7od-kW-adk" id="YEp-39-fCJ"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -15,13 +16,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date picker" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="7od-kW-adk">
-                    <rect key="frame" x="112" y="91" width="97" height="30"/>
+                    <rect key="frame" x="20" y="91" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Wheel picker" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="Jl1-1k-hJP">
-                    <rect key="frame" x="112" y="165" width="105" height="30"/>
+                    <rect key="frame" x="20" y="165" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
