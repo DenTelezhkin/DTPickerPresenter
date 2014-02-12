@@ -16,9 +16,14 @@
 {
     DTDatePickerPresenter * presenter = [self new];
     
-    presenter.selectBlock = resultBlock;
+    presenter.changeBlock = resultBlock;
     
     return presenter;
+}
+
+-(void)dealloc
+{
+    [_datePicker removeTarget:self action:NULL forControlEvents:UIControlEventValueChanged];
 }
 
 -(void)setDatePicker:(UIDatePicker *)newDatePicker
@@ -41,9 +46,9 @@
 
 -(void)valueChanged:(UIDatePicker *)picker
 {
-    if (self.selectBlock)
+    if (self.changeBlock)
     {
-        self.selectBlock(self.datePicker.date);
+        self.changeBlock(self.datePicker.date);
     }
 }
 

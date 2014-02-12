@@ -14,7 +14,7 @@ typedef void(^DTDatePickerChangeBlock) (NSDate * selectedDate);
 
 @property (nonatomic, retain) UIDatePicker * datePicker;
 
-@property (nonatomic, copy) DTDatePickerChangeBlock selectBlock;
+@property (nonatomic, copy) DTDatePickerChangeBlock changeBlock;
 
 +(instancetype)presenterWithChangeBlock:(DTDatePickerChangeBlock)resultBlock;
 

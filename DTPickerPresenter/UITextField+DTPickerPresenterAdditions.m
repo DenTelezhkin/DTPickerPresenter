@@ -39,7 +39,7 @@
 
 -(void)dt_setDatePickerPresenter:(DTDatePickerPresenter *)presenter
 {
-    NSAssert(presenter.selectBlock, @"DTDatePickerPresenter should have non nil select block");
+    NSAssert(presenter.changeBlock, @"DTDatePickerPresenter should have non nil change block");
     self.inputView = presenter.datePicker;
 }
 
