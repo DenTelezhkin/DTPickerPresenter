@@ -10,6 +10,7 @@
 		412DA0F0123B42018D91BDAE /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BED449838F47B6899DB34A /* libPods-Specs.a */; };
 		AA0CD1B718AB9B94008FE536 /* DTDatePickerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1B618AB9B94008FE536 /* DTDatePickerPresenter.m */; };
 		AA0CD1BA18AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1B918AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m */; };
+		AA0CD1C218ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1C118ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m */; };
 		AA1C789118A9024E00DC8AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA1C788F18A9024E00DC8AD1 /* InfoPlist.strings */; };
 		AA1C78BB18A9026C00DC8AD1 /* DTPickerInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78B718A9026C00DC8AD1 /* DTPickerInputView.m */; };
 		AA1C78BC18A9026C00DC8AD1 /* DTPickerInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1C78B818A9026C00DC8AD1 /* DTPickerInputView.xib */; };
@@ -18,7 +19,6 @@
 		AA1C78C518A904E700DC8AD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78C318A904E700DC8AD1 /* AppDelegate.m */; };
 		AA1C78C618A904E700DC8AD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1C78C418A904E700DC8AD1 /* Images.xcassets */; };
 		AA1C78CB18A904FC00DC8AD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78CA18A904FC00DC8AD1 /* main.m */; };
-		AA1C78CD18A9051000DC8AD1 /* DTPickerPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78CC18A9051000DC8AD1 /* DTPickerPresenterTests.m */; };
 		AA1C78D418A9051C00DC8AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA1C78D118A9051C00DC8AD1 /* InfoPlist.strings */; };
 		AA64F2AB18A90B9A006E3455 /* PickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA64F2A918A90B9A006E3455 /* PickerController.m */; };
 		AA64F2AC18A90B9A006E3455 /* PickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA64F2AA18A90B9A006E3455 /* PickerController.xib */; };
@@ -42,6 +42,7 @@
 		AA0CD1B618AB9B94008FE536 /* DTDatePickerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDatePickerPresenter.m; path = ../DTPickerPresenter/DTDatePickerPresenter.m; sourceTree = "<group>"; };
 		AA0CD1B818AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+DTPickerPresenterAdditions.h"; path = "../DTPickerPresenter/UITextField+DTPickerPresenterAdditions.h"; sourceTree = "<group>"; };
 		AA0CD1B918AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+DTPickerPresenterAdditions.m"; path = "../DTPickerPresenter/UITextField+DTPickerPresenterAdditions.m"; sourceTree = "<group>"; };
+		AA0CD1C118ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDatePickerPresenterSpecs.m; path = DTPickerPresenterTests/Specs/DTDatePickerPresenterSpecs.m; sourceTree = SOURCE_ROOT; };
 		AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTPickerPresenterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C789018A9024E00DC8AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA1C789E18A9024E00DC8AD1 /* DTPickerPresenter.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTPickerPresenter.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +59,6 @@
 		AA1C78C718A904F000DC8AD1 /* DTPickerPresenterExample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DTPickerPresenterExample.plist; path = DTPickerPresenterExample/DTPickerPresenterExample.plist; sourceTree = SOURCE_ROOT; };
 		AA1C78C918A904FC00DC8AD1 /* DTPickerPresenterExample.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPickerPresenterExample.pch; path = DTPickerPresenterExample/DTPickerPresenterExample.pch; sourceTree = SOURCE_ROOT; };
 		AA1C78CA18A904FC00DC8AD1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DTPickerPresenterExample/main.m; sourceTree = SOURCE_ROOT; };
-		AA1C78CC18A9051000DC8AD1 /* DTPickerPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerPresenterTests.m; path = DTPickerPresenterTests/Specs/DTPickerPresenterTests.m; sourceTree = SOURCE_ROOT; };
 		AA1C78CE18A9051C00DC8AD1 /* DTPickerPresenterSpecs.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPickerPresenterSpecs.pch; path = DTPickerPresenterTests/DTPickerPresenterSpecs.pch; sourceTree = SOURCE_ROOT; };
 		AA1C78CF18A9051C00DC8AD1 /* DTPickerPresenter-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DTPickerPresenter-Info.plist"; path = "DTPickerPresenterTests/DTPickerPresenter-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AA1C78D218A9051C00DC8AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0CD1BD18ABA24E008FE536 /* Mocks */,
-				AA1C78CC18A9051000DC8AD1 /* DTPickerPresenterTests.m */,
+				AA0CD1C118ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m */,
 				AA1C78A618A9024E00DC8AD1 /* Supporting Files */,
 			);
 			name = Specs;
@@ -344,7 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA1C78CD18A9051000DC8AD1 /* DTPickerPresenterTests.m in Sources */,
+				AA0CD1C218ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@
 
 @implementation DTDatePickerPresenter
 
+@synthesize datePicker = _datePicker;
+
 +(instancetype)presenterWithChangeBlock:(DTDatePickerChangeBlock)resultBlock
 {
     DTDatePickerPresenter * presenter = [self new];
@@ -17,6 +19,14 @@
     presenter.selectBlock = resultBlock;
     
     return presenter;
+}
+
+-(void)setDatePicker:(UIDatePicker *)newDatePicker
+{
+    NSParameterAssert([newDatePicker isKindOfClass:[UIDatePicker class]]);
+    
+    _datePicker = newDatePicker;
+    [_datePicker addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
 -(UIDatePicker *)datePicker
