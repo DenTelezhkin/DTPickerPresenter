@@ -11,11 +11,11 @@
 		AA0CD1B718AB9B94008FE536 /* DTDatePickerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1B618AB9B94008FE536 /* DTDatePickerPresenter.m */; };
 		AA0CD1BA18AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1B918AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m */; };
 		AA0CD1C218ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1C118ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m */; };
+		AA0CD1C418ABB2EB008FE536 /* DTPickerPresenterSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1C318ABB2EB008FE536 /* DTPickerPresenterSpecs.m */; };
+		AA0CD1C718ABBC87008FE536 /* DTPickerDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1C618ABBC87008FE536 /* DTPickerDatasource.m */; };
+		AA0CD1C918ABBCE9008FE536 /* DTPickerDatasourceSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1C818ABBCE9008FE536 /* DTPickerDatasourceSpecs.m */; };
 		AA1C789118A9024E00DC8AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA1C788F18A9024E00DC8AD1 /* InfoPlist.strings */; };
-		AA1C78BB18A9026C00DC8AD1 /* DTPickerInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78B718A9026C00DC8AD1 /* DTPickerInputView.m */; };
-		AA1C78BC18A9026C00DC8AD1 /* DTPickerInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA1C78B818A9026C00DC8AD1 /* DTPickerInputView.xib */; };
 		AA1C78BD18A9026C00DC8AD1 /* DTPickerViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78BA18A9026C00DC8AD1 /* DTPickerViewPresenter.m */; };
-		AA1C78C018A9029A00DC8AD1 /* UIView+LoadFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78BF18A9029A00DC8AD1 /* UIView+LoadFromXib.m */; };
 		AA1C78C518A904E700DC8AD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78C318A904E700DC8AD1 /* AppDelegate.m */; };
 		AA1C78C618A904E700DC8AD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1C78C418A904E700DC8AD1 /* Images.xcassets */; };
 		AA1C78CB18A904FC00DC8AD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C78CA18A904FC00DC8AD1 /* main.m */; };
@@ -43,16 +43,16 @@
 		AA0CD1B818AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+DTPickerPresenterAdditions.h"; path = "../DTPickerPresenter/UITextField+DTPickerPresenterAdditions.h"; sourceTree = "<group>"; };
 		AA0CD1B918AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+DTPickerPresenterAdditions.m"; path = "../DTPickerPresenter/UITextField+DTPickerPresenterAdditions.m"; sourceTree = "<group>"; };
 		AA0CD1C118ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDatePickerPresenterSpecs.m; path = DTPickerPresenterTests/Specs/DTDatePickerPresenterSpecs.m; sourceTree = SOURCE_ROOT; };
+		AA0CD1C318ABB2EB008FE536 /* DTPickerPresenterSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerPresenterSpecs.m; path = DTPickerPresenterTests/Specs/DTPickerPresenterSpecs.m; sourceTree = SOURCE_ROOT; };
+		AA0CD1C518ABBC87008FE536 /* DTPickerDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPickerDatasource.h; path = ../DTPickerPresenter/DTPickerDatasource.h; sourceTree = "<group>"; };
+		AA0CD1C618ABBC87008FE536 /* DTPickerDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerDatasource.m; path = ../DTPickerPresenter/DTPickerDatasource.m; sourceTree = "<group>"; };
+		AA0CD1C818ABBCE9008FE536 /* DTPickerDatasourceSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerDatasourceSpecs.m; path = DTPickerPresenterTests/Specs/DTPickerDatasourceSpecs.m; sourceTree = SOURCE_ROOT; };
+		AA0CD1CB18ABC818008FE536 /* DTPickerViewDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DTPickerViewDatasource.h; path = ../DTPickerPresenter/DTPickerViewDatasource.h; sourceTree = "<group>"; };
 		AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTPickerPresenterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C789018A9024E00DC8AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA1C789E18A9024E00DC8AD1 /* DTPickerPresenter.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTPickerPresenter.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA1C78B618A9026C00DC8AD1 /* DTPickerInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPickerInputView.h; path = ../DTPickerPresenter/DTPickerInputView.h; sourceTree = "<group>"; };
-		AA1C78B718A9026C00DC8AD1 /* DTPickerInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerInputView.m; path = ../DTPickerPresenter/DTPickerInputView.m; sourceTree = "<group>"; };
-		AA1C78B818A9026C00DC8AD1 /* DTPickerInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DTPickerInputView.xib; path = ../DTPickerPresenter/DTPickerInputView.xib; sourceTree = "<group>"; };
 		AA1C78B918A9026C00DC8AD1 /* DTPickerViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPickerViewPresenter.h; path = ../DTPickerPresenter/DTPickerViewPresenter.h; sourceTree = "<group>"; };
 		AA1C78BA18A9026C00DC8AD1 /* DTPickerViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerViewPresenter.m; path = ../DTPickerPresenter/DTPickerViewPresenter.m; sourceTree = "<group>"; };
-		AA1C78BE18A9029A00DC8AD1 /* UIView+LoadFromXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LoadFromXib.h"; path = "../DTPickerPresenter/UIView+LoadFromXib.h"; sourceTree = "<group>"; };
-		AA1C78BF18A9029A00DC8AD1 /* UIView+LoadFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LoadFromXib.m"; path = "../DTPickerPresenter/UIView+LoadFromXib.m"; sourceTree = "<group>"; };
 		AA1C78C218A904E700DC8AD1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DTPickerPresenterExample/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		AA1C78C318A904E700DC8AD1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = DTPickerPresenterExample/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		AA1C78C418A904E700DC8AD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DTPickerPresenterExample/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -93,13 +93,6 @@
 				29BED449838F47B6899DB34A /* libPods-Specs.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AA0CD1BD18ABA24E008FE536 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Mocks;
 			sourceTree = "<group>";
 		};
 		AA1C787A18A9024E00DC8AD1 = {
@@ -152,9 +145,10 @@
 		AA1C78A518A9024E00DC8AD1 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				AA0CD1BD18ABA24E008FE536 /* Mocks */,
 				AA0CD1C118ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m */,
+				AA0CD1C318ABB2EB008FE536 /* DTPickerPresenterSpecs.m */,
 				AA1C78A618A9024E00DC8AD1 /* Supporting Files */,
+				AA0CD1C818ABBCE9008FE536 /* DTPickerDatasourceSpecs.m */,
 			);
 			name = Specs;
 			path = DTPickerPresenterTestsTests;
@@ -173,17 +167,15 @@
 		AA1C78B518A9025400DC8AD1 /* DTPickerPresenter */ = {
 			isa = PBXGroup;
 			children = (
-				AA1C78BE18A9029A00DC8AD1 /* UIView+LoadFromXib.h */,
-				AA1C78BF18A9029A00DC8AD1 /* UIView+LoadFromXib.m */,
-				AA1C78B618A9026C00DC8AD1 /* DTPickerInputView.h */,
-				AA1C78B718A9026C00DC8AD1 /* DTPickerInputView.m */,
-				AA1C78B818A9026C00DC8AD1 /* DTPickerInputView.xib */,
 				AA1C78B918A9026C00DC8AD1 /* DTPickerViewPresenter.h */,
 				AA1C78BA18A9026C00DC8AD1 /* DTPickerViewPresenter.m */,
+				AA0CD1C518ABBC87008FE536 /* DTPickerDatasource.h */,
+				AA0CD1C618ABBC87008FE536 /* DTPickerDatasource.m */,
 				AA0CD1B518AB9B94008FE536 /* DTDatePickerPresenter.h */,
 				AA0CD1B618AB9B94008FE536 /* DTDatePickerPresenter.m */,
 				AA0CD1B818AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.h */,
 				AA0CD1B918AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m */,
+				AA0CD1CB18ABC818008FE536 /* DTPickerViewDatasource.h */,
 			);
 			name = DTPickerPresenter;
 			sourceTree = "<group>";
@@ -276,7 +268,6 @@
 			files = (
 				AA1C78C618A904E700DC8AD1 /* Images.xcassets in Resources */,
 				AA1C789118A9024E00DC8AD1 /* InfoPlist.strings in Resources */,
-				AA1C78BC18A9026C00DC8AD1 /* DTPickerInputView.xib in Resources */,
 				AA64F2AC18A90B9A006E3455 /* PickerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,10 +323,9 @@
 				AA0CD1B718AB9B94008FE536 /* DTDatePickerPresenter.m in Sources */,
 				AA1C78CB18A904FC00DC8AD1 /* main.m in Sources */,
 				AA0CD1BA18AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m in Sources */,
-				AA1C78C018A9029A00DC8AD1 /* UIView+LoadFromXib.m in Sources */,
-				AA1C78BB18A9026C00DC8AD1 /* DTPickerInputView.m in Sources */,
 				AA64F2AB18A90B9A006E3455 /* PickerController.m in Sources */,
 				AA1C78BD18A9026C00DC8AD1 /* DTPickerViewPresenter.m in Sources */,
+				AA0CD1C718ABBC87008FE536 /* DTPickerDatasource.m in Sources */,
 				AA1C78C518A904E700DC8AD1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,7 +334,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0CD1C918ABBCE9008FE536 /* DTPickerDatasourceSpecs.m in Sources */,
 				AA0CD1C218ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m in Sources */,
+				AA0CD1C418ABB2EB008FE536 /* DTPickerPresenterSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

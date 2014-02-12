@@ -6,24 +6,20 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import "DTPickerInputView.h"
+#import "UITextField+DTPickerPresenterAdditions.h"
+#import "DTPickerViewDatasource.h"
 
-typedef void(^DTPickerViewPresenterCompletionBlock)(NSArray * selectedComponents,NSIndexPath * selectedIndexPath, BOOL wasCancelled);
+typedef void(^DTPickerChangeBlock)(NSArray * selectedComponents,NSIndexPath * selectedIndexPath, BOOL wasCancelled);
 
-@interface DTPickerViewPresenter : NSObject <DTPickerInputViewSelection,UIPickerViewDataSource,UIPickerViewDelegate>
+@interface DTPickerViewPresenter : NSObject
 
-+(instancetype)presenterForTextField:(UITextField *)textfield;
+@property (nonatomic, strong) UIPickerView * pickerView;
 
-/**
- This property needs to hold an array of arrays - items for UIPickerView
- */
+@property (nonatomic, strong) id <DTPickerViewDatasource> dataSource;
 
-@property (nonatomic, retain) NSArray * items;
+@property (nonatomic, copy) DTPickerChangeBlock changeBlock;
 
-@property (nonatomic, weak) UITextField * textFieldWithPicker;
-
-@property (nonatomic, retain) UIPickerView * pickerView;
-
-@property (nonatomic, copy) DTPickerViewPresenterCompletionBlock completionBlock;
++(instancetype)presenterWithDatasource:(id <DTPickerViewDatasource>)dataSource
+                           changeBlock:(DTPickerChangeBlock)changeBlock;
 
 @end

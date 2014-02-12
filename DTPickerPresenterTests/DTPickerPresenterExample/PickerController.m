@@ -8,9 +8,12 @@
 
 #import "PickerController.h"
 #import "DTDatePickerPresenter.h"
+#import "DTPickerViewPresenter.h"
+#import "DTPickerDatasource.h"
 
 @interface PickerController ()
 @property (weak, nonatomic) IBOutlet UITextField *datePickerTextField;
+@property (weak, nonatomic) IBOutlet UITextField *wheelPickerTextfield;
 
 @end
 
@@ -20,12 +23,27 @@
 {
     [super viewDidLoad];
     
+    // Date picker
+    
     __weak typeof (self) weakSelf = self;
     DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate *selectedDate) {
         weakSelf.datePickerTextField.text = [selectedDate description];
     }];
     
     [self.datePickerTextField dt_setPickerPresenter:presenter];
+    
+    
+    // Wheel picker
+    
+    DTPickerDataSource * datasource = [DTPickerDataSource datasourceWithItems:@[@[@"foo",@"bar",@"cat"], @[@"OMG!",@"WTF!"]]];
+    
+    DTPickerChangeBlock block = ^(NSArray *selectedComponents, NSIndexPath *selectedIndexPath, BOOL wasCancelled)
+    {
+        weakSelf.wheelPickerTextfield.text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
+    };
+    DTPickerViewPresenter * wheelPresenter = [DTPickerViewPresenter presenterWithDatasource:datasource
+                                                                                changeBlock:block];
+    [self.wheelPickerTextfield dt_setPickerPresenter:wheelPresenter];
 }
 
 

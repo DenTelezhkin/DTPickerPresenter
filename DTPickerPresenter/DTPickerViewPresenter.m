@@ -7,78 +7,55 @@
 //
 
 #import "DTPickerViewPresenter.h"
-#import "UIView+LoadFromXib.h"
+
+@interface DTPickerViewPresenter() <UIPickerViewDelegate>
+@end
 
 @implementation DTPickerViewPresenter
 
-+(instancetype)presenterForTextField:(UITextField *)textfield
++(instancetype)presenterWithDatasource:(id<DTPickerViewDatasource>)dataSource
+                           changeBlock:(DTPickerChangeBlock)changeBlock
 {
     DTPickerViewPresenter * presenter = [self new];
     
-    presenter.textFieldWithPicker = textfield;
-    
-    DTPickerInputView * inputView = [DTPickerInputView loadFromXib];
-    
-    inputView.pickerView.delegate = presenter;
-    inputView.pickerView.dataSource = presenter;
-    inputView.delegate = presenter;
-    
-    presenter.textFieldWithPicker.inputView = inputView;
+    presenter.dataSource = dataSource;
+    [dataSource setDelegate:presenter];
+    presenter.changeBlock = changeBlock;
     
     return presenter;
 }
 
--(void)setItems:(NSArray *)items
+-(UIPickerView *)pickerView
 {
-    for (NSArray * components in items)
+    if (!_pickerView)
     {
-        NSParameterAssert([components isKindOfClass:[NSArray class]]);
+        _pickerView = [[UIPickerView alloc] init];
+        _pickerView.dataSource = self.dataSource;
+        _pickerView.delegate = self.dataSource;
     }
-    _items = items;
+    return _pickerView;
 }
 
--(void)pickerViewDidCancel
-{
-    [self.textFieldWithPicker resignFirstResponder];
-    
-    if (self.completionBlock)
-    {
-        self.completionBlock(nil, nil, YES);
-    }
-}
+#pragma mark - UIPickerViewDelegate
 
--(void)pickerViewDidFinishSelectionWithResult:(NSIndexPath *)selectedIndexPath
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    [self.textFieldWithPicker resignFirstResponder];
-    
+    NSIndexPath * selectedIndexPath = [[NSIndexPath alloc] init];
+
+    for (int component = 0; component<self.pickerView.numberOfComponents; component++)
+    {
+        selectedIndexPath = [selectedIndexPath indexPathByAddingIndex:[self.pickerView selectedRowInComponent:component]];
+    }
+
     NSMutableArray * resultsArray = [NSMutableArray arrayWithCapacity:[selectedIndexPath length]];
     
     for (int component = 0; component < [selectedIndexPath length] ; component++ )
     {
         NSUInteger selectedValue = [selectedIndexPath indexAtPosition:component];
-        [resultsArray addObject:[self.items[component] objectAtIndex:selectedValue]];
+        [resultsArray addObject:[self.dataSource.items[component] objectAtIndex:selectedValue]];
     }
     
-    self.completionBlock([resultsArray copy],selectedIndexPath,NO);
-}
-
-#pragma mark - UIPickerViewDelegate
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return self.items[component][row];
-}
-
-#pragma mark - UIPickerViewDatasource
-
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return [self.items count];
-}
-
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return [self.items[component] count];
+    self.changeBlock([resultsArray copy],selectedIndexPath,NO);
 }
 
 @end

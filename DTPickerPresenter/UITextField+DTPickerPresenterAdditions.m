@@ -45,6 +45,7 @@
 
 -(void)dt_setPickerViewPresenter:(DTPickerViewPresenter *)presenter
 {
+    NSAssert(presenter.changeBlock, @"DTPickerViewPresenter should have non nil change block");
     self.inputView = presenter.pickerView;
 }
 

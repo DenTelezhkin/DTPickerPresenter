@@ -12,7 +12,7 @@ typedef void(^DTDatePickerChangeBlock) (NSDate * selectedDate);
 
 @interface DTDatePickerPresenter : NSObject
 
-@property (nonatomic, retain) UIDatePicker * datePicker;
+@property (nonatomic, strong) UIDatePicker * datePicker;
 
 @property (nonatomic, copy) DTDatePickerChangeBlock changeBlock;
 
