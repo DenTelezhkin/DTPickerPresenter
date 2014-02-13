@@ -167,15 +167,9 @@
 		AA1C78B518A9025400DC8AD1 /* DTPickerPresenter */ = {
 			isa = PBXGroup;
 			children = (
-				AA1C78B918A9026C00DC8AD1 /* DTPickerViewPresenter.h */,
-				AA1C78BA18A9026C00DC8AD1 /* DTPickerViewPresenter.m */,
-				AA0CD1C518ABBC87008FE536 /* DTPickerDatasource.h */,
-				AA0CD1C618ABBC87008FE536 /* DTPickerDatasource.m */,
-				AA0CD1B518AB9B94008FE536 /* DTDatePickerPresenter.h */,
-				AA0CD1B618AB9B94008FE536 /* DTDatePickerPresenter.m */,
-				AA0CD1B818AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.h */,
-				AA0CD1B918AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m */,
-				AA0CD1CB18ABC818008FE536 /* DTPickerViewDatasource.h */,
+				AA83F53318AD0A3000332F23 /* UIKit+DTPickerPresenter */,
+				AA83F53218AD0A2300332F23 /* Picker */,
+				AA83F53118AD0A1B00332F23 /* DatePicker */,
 			);
 			name = DTPickerPresenter;
 			sourceTree = "<group>";
@@ -188,6 +182,44 @@
 			name = en.lproj;
 			path = DTPickerPresenterTests/en.lproj;
 			sourceTree = SOURCE_ROOT;
+		};
+		AA83F53018AD0A0700332F23 /* Picker datasource */ = {
+			isa = PBXGroup;
+			children = (
+				AA0CD1CB18ABC818008FE536 /* DTPickerViewDatasource.h */,
+				AA0CD1C518ABBC87008FE536 /* DTPickerDatasource.h */,
+				AA0CD1C618ABBC87008FE536 /* DTPickerDatasource.m */,
+			);
+			name = "Picker datasource";
+			sourceTree = "<group>";
+		};
+		AA83F53118AD0A1B00332F23 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				AA0CD1B518AB9B94008FE536 /* DTDatePickerPresenter.h */,
+				AA0CD1B618AB9B94008FE536 /* DTDatePickerPresenter.m */,
+			);
+			name = DatePicker;
+			sourceTree = "<group>";
+		};
+		AA83F53218AD0A2300332F23 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				AA83F53018AD0A0700332F23 /* Picker datasource */,
+				AA1C78B918A9026C00DC8AD1 /* DTPickerViewPresenter.h */,
+				AA1C78BA18A9026C00DC8AD1 /* DTPickerViewPresenter.m */,
+			);
+			name = Picker;
+			sourceTree = "<group>";
+		};
+		AA83F53318AD0A3000332F23 /* UIKit+DTPickerPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				AA0CD1B818AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.h */,
+				AA0CD1B918AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m */,
+			);
+			name = "UIKit+DTPickerPresenter";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 

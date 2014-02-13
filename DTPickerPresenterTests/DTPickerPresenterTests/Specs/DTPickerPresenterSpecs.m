@@ -25,7 +25,7 @@
     
     UITextField * textfield = [UITextField new];
     
-    [textfield dt_setPickerPresenter:presenter];
+    [textfield dt_setPresenter:presenter];
     
     expect([textfield dt_presenter]).to.equal(presenter);
 }
@@ -37,7 +37,7 @@
     UITextField * textfield = [UITextField new];
     
     expect(^{
-        [textfield dt_setPickerPresenter:presenter];
+        [textfield dt_setPresenter:presenter];
     }).to.raiseAny();
 }
 
@@ -49,7 +49,7 @@
     
     UITextField * textfield = [UITextField new];
     
-    [textfield dt_setPickerPresenter:presenter];
+    [textfield dt_setPresenter:presenter];
     
     expect(textfield.inputView).to.equal(presenter.pickerView);
 }

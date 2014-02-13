@@ -30,7 +30,7 @@
         weakSelf.datePickerTextField.text = [selectedDate description];
     }];
     
-    [self.datePickerTextField dt_setPickerPresenter:presenter];
+    [self.datePickerTextField dt_setPresenter:presenter];
     
     
     // Wheel picker
@@ -43,7 +43,7 @@
     };
     DTPickerViewPresenter * wheelPresenter = [DTPickerViewPresenter presenterWithDatasource:datasource
                                                                                 changeBlock:block];
-    [self.wheelPickerTextfield dt_setPickerPresenter:wheelPresenter];
+    [self.wheelPickerTextfield dt_setPresenter:wheelPresenter];
 }
 
 

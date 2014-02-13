@@ -13,7 +13,7 @@
 
 @implementation UITextField (DTPickerPresenterAdditions)
 
--(void)dt_setPickerPresenter:(id)presenter
+-(void)dt_setPresenter:(id)presenter
 {
     BOOL datePicker = [presenter isKindOfClass:[DTDatePickerPresenter class]];
     BOOL picker = [presenter isKindOfClass:[DTPickerViewPresenter class]];
