@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="datePickerTextField" destination="7od-kW-adk" id="YEp-39-fCJ"/>
                 <outlet property="view" destination="1" id="3"/>
-                <outlet property="wheelPickerTextfield" destination="Jl1-1k-hJP" id="UZ9-Je-MgE"/>
+                <outlet property="wheelPickerTextField" destination="Jl1-1k-hJP" id="UZ9-Je-MgE"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

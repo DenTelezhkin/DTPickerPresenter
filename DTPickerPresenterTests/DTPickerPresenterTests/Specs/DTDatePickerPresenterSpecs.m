@@ -18,9 +18,8 @@
 
 - (void)testAssociatedObjects
 {
-    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate)
-        {
-        }];
+    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate) {
+    }];
 
     UITextField * textfield = [UITextField new];
 
@@ -35,17 +34,15 @@
 
     UITextField * textfield = [UITextField new];
 
-    expect(^
-        {
-            [textfield dt_setPresenter:presenter];
-        }).to.raiseAny();
+    expect(^{
+        [textfield dt_setPresenter:presenter];
+    }).to.raiseAny();
 }
 
 - (void)testInputView
 {
-    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate)
-        {
-        }];
+    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate) {
+    }];
 
     UITextField * textfield = [UITextField new];
 

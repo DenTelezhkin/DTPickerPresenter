@@ -13,7 +13,7 @@
 
 @interface PickerController ()
 @property (weak, nonatomic) IBOutlet UITextField * datePickerTextField;
-@property (weak, nonatomic) IBOutlet UITextField * wheelPickerTextfield;
+@property (weak, nonatomic) IBOutlet UITextField * wheelPickerTextField;
 @end
 
 @implementation PickerController
@@ -36,10 +36,10 @@
     DTPickerDataSource * datasource = [DTPickerDataSource datasourceWithItems:@[@[@"foo", @"bar", @"cat"], @[@"OMG!", @"WTF!"]]];
 
     DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
-        weakSelf.wheelPickerTextfield.text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
+        weakSelf.wheelPickerTextField.text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
     };
     DTPickerViewPresenter * wheelPresenter = [DTPickerViewPresenter presenterWithDatasource:datasource
                                                                                 changeBlock:block];
-    [self.wheelPickerTextfield dt_setPresenter:wheelPresenter];
+    [self.wheelPickerTextField dt_setPresenter:wheelPresenter];
 }
 @end

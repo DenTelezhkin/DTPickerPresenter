@@ -23,7 +23,7 @@
 
 - (void)dealloc
 {
-    [_datePicker removeTarget:self action:NULL forControlEvents:UIControlEventValueChanged];
+    [self.datePicker removeTarget:self action:NULL forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)setDatePicker:(UIDatePicker *)newDatePicker
