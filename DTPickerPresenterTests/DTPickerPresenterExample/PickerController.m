@@ -25,10 +25,9 @@
     // Date picker
 
     __weak typeof (self) weakSelf = self;
-    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate)
-        {
-            weakSelf.datePickerTextField.text = [selectedDate description];
-        }];
+    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate) {
+        weakSelf.datePickerTextField.text = [selectedDate description];
+    }];
 
     [self.datePickerTextField dt_setPresenter:presenter];
 
@@ -36,10 +35,9 @@
 
     DTPickerDataSource * datasource = [DTPickerDataSource datasourceWithItems:@[@[@"foo", @"bar", @"cat"], @[@"OMG!", @"WTF!"]]];
 
-    DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled)
-        {
-            weakSelf.wheelPickerTextfield.text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
-        };
+    DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
+        weakSelf.wheelPickerTextfield.text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
+    };
     DTPickerViewPresenter * wheelPresenter = [DTPickerViewPresenter presenterWithDatasource:datasource
                                                                                 changeBlock:block];
     [self.wheelPickerTextfield dt_setPresenter:wheelPresenter];

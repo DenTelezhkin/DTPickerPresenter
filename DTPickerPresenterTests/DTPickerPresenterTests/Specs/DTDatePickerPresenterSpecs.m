@@ -18,36 +18,39 @@
 
 - (void)testAssociatedObjects
 {
-    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate *selectedDate) {
-    }];
-    
+    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate)
+        {
+        }];
+
     UITextField * textfield = [UITextField new];
-    
+
     [textfield dt_setPresenter:presenter];
-    
+
     expect([textfield dt_presenter]).to.equal(presenter);
 }
 
--(void)testTextfieldDoesNotAcceptPresenterWithoutBlock
+- (void)testTextfieldDoesNotAcceptPresenterWithoutBlock
 {
     DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:nil];
-    
+
     UITextField * textfield = [UITextField new];
-    
-    expect(^{
-        [textfield dt_setPresenter:presenter];
-    }).to.raiseAny();
+
+    expect(^
+        {
+            [textfield dt_setPresenter:presenter];
+        }).to.raiseAny();
 }
 
--(void)testInputView
+- (void)testInputView
 {
-    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate *selectedDate) {
-    }];
-    
+    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate)
+        {
+        }];
+
     UITextField * textfield = [UITextField new];
-    
+
     [textfield dt_setPresenter:presenter];
-    
+
     expect(textfield.inputView).to.equal(presenter.datePicker);
 }
 

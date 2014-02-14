@@ -19,38 +19,40 @@
 - (void)testExample
 {
     DTPickerViewPresenter * presenter = [DTPickerViewPresenter presenterWithDatasource:nil
-                                         changeBlock:^(NSArray *selectedComponents, NSIndexPath *selectedIndexPath, BOOL wasCancelled) {
-        
-    }];
-    
+                                                                           changeBlock:
+        ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
+
+        }
+    ];
+
     UITextField * textfield = [UITextField new];
-    
+
     [textfield dt_setPresenter:presenter];
-    
+
     expect([textfield dt_presenter]).to.equal(presenter);
 }
 
--(void)testTextfieldDoesNotAcceptPresenterWithoutBlock
+- (void)testTextfieldDoesNotAcceptPresenterWithoutBlock
 {
     DTPickerViewPresenter * presenter = [DTPickerViewPresenter presenterWithDatasource:nil changeBlock:nil];
-    
+
     UITextField * textfield = [UITextField new];
-    
+
     expect(^{
         [textfield dt_setPresenter:presenter];
     }).to.raiseAny();
 }
 
--(void)testInputView
+- (void)testInputView
 {
-    DTPickerViewPresenter * presenter = [DTPickerViewPresenter presenterWithDatasource:nil changeBlock:^(NSArray *selectedComponents, NSIndexPath *selectedIndexPath, BOOL wasCancelled) {
-        
+    DTPickerViewPresenter * presenter = [DTPickerViewPresenter presenterWithDatasource:nil changeBlock:^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
+
     }];
-    
+
     UITextField * textfield = [UITextField new];
-    
+
     [textfield dt_setPresenter:presenter];
-    
+
     expect(textfield.inputView).to.equal(presenter.pickerView);
 }
 
