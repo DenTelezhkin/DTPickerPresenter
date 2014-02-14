@@ -22,6 +22,7 @@
 		AA1C78D418A9051C00DC8AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA1C78D118A9051C00DC8AD1 /* InfoPlist.strings */; };
 		AA64F2AB18A90B9A006E3455 /* PickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA64F2A918A90B9A006E3455 /* PickerController.m */; };
 		AA64F2AC18A90B9A006E3455 /* PickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA64F2AA18A90B9A006E3455 /* PickerController.xib */; };
+		AA83F53518AD0C1800332F23 /* PickerController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA83F53418AD0C1800332F23 /* PickerController~ipad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		AA64F2A818A90B9A006E3455 /* PickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickerController.h; path = DTPickerPresenterExample/PickerController.h; sourceTree = SOURCE_ROOT; };
 		AA64F2A918A90B9A006E3455 /* PickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickerController.m; path = DTPickerPresenterExample/PickerController.m; sourceTree = SOURCE_ROOT; };
 		AA64F2AA18A90B9A006E3455 /* PickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PickerController.xib; path = DTPickerPresenterExample/PickerController.xib; sourceTree = SOURCE_ROOT; };
+		AA83F53418AD0C1800332F23 /* PickerController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "PickerController~ipad.xib"; path = "DTPickerPresenterExample/PickerController~ipad.xib"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				AA64F2A818A90B9A006E3455 /* PickerController.h */,
 				AA64F2A918A90B9A006E3455 /* PickerController.m */,
 				AA64F2AA18A90B9A006E3455 /* PickerController.xib */,
+				AA83F53418AD0C1800332F23 /* PickerController~ipad.xib */,
 			);
 			name = Example;
 			path = DTPickerPresenterTests;
@@ -298,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA83F53518AD0C1800332F23 /* PickerController~ipad.xib in Resources */,
 				AA1C78C618A904E700DC8AD1 /* Images.xcassets in Resources */,
 				AA1C789118A9024E00DC8AD1 /* InfoPlist.strings in Resources */,
 				AA64F2AC18A90B9A006E3455 /* PickerController.xib in Resources */,
@@ -482,7 +486,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DTPickerPresenterExample/DTPickerPresenterExample.pch;
 				INFOPLIST_FILE = DTPickerPresenterExample/DTPickerPresenterExample.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -495,7 +501,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DTPickerPresenterExample/DTPickerPresenterExample.pch;
 				INFOPLIST_FILE = DTPickerPresenterExample/DTPickerPresenterExample.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
