@@ -8,7 +8,7 @@
 
 #import "UITextField+DTPickerPresenterAdditions.h"
 
-typedef void(^DTDatePickerChangeBlock) (NSDate * selectedDate);
+typedef void(^DTDatePickerChangeBlock)(NSDate * selectedDate);
 
 @interface DTDatePickerPresenter : NSObject
 
@@ -16,6 +16,6 @@ typedef void(^DTDatePickerChangeBlock) (NSDate * selectedDate);
 
 @property (nonatomic, copy) DTDatePickerChangeBlock changeBlock;
 
-+(instancetype)presenterWithChangeBlock:(DTDatePickerChangeBlock)resultBlock;
++ (instancetype)presenterWithChangeBlock:(DTDatePickerChangeBlock)resultBlock;
 
 @end

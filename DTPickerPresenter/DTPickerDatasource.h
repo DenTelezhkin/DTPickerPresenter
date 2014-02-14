@@ -11,7 +11,7 @@
 
 @interface DTPickerDataSource : NSObject <DTPickerViewDatasource>
 
-+(instancetype)datasourceWithItems:(NSArray *)items;
++ (instancetype)datasourceWithItems:(NSArray *)items;
 
 @property (nonatomic, retain) NSArray * items;
 

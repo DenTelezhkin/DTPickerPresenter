@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DTPickerViewDatasource <UIPickerViewDelegate,UIPickerViewDataSource>
+@protocol DTPickerViewDatasource <UIPickerViewDelegate, UIPickerViewDataSource>
 
-@property (nonatomic,weak) id <UIPickerViewDelegate> delegate;
+@property (nonatomic, weak) id <UIPickerViewDelegate> delegate;
 @property (nonatomic, retain) NSArray * items;
 
 @end

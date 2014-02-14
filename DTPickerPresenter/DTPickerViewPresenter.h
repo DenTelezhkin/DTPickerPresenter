@@ -9,7 +9,7 @@
 #import "UITextField+DTPickerPresenterAdditions.h"
 #import "DTPickerViewDatasource.h"
 
-typedef void(^DTPickerChangeBlock)(NSArray * selectedComponents,NSIndexPath * selectedIndexPath, BOOL wasCancelled);
+typedef void(^DTPickerChangeBlock)(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled);
 
 @interface DTPickerViewPresenter : NSObject
 
@@ -19,7 +19,7 @@ typedef void(^DTPickerChangeBlock)(NSArray * selectedComponents,NSIndexPath * se
 
 @property (nonatomic, copy) DTPickerChangeBlock changeBlock;
 
-+(instancetype)presenterWithDatasource:(id <DTPickerViewDatasource>)dataSource
-                           changeBlock:(DTPickerChangeBlock)changeBlock;
++ (instancetype)presenterWithDatasource:(id <DTPickerViewDatasource>)dataSource
+                            changeBlock:(DTPickerChangeBlock)changeBlock;
 
 @end

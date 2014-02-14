@@ -12,42 +12,40 @@
 
 @synthesize datePicker = _datePicker;
 
-+(instancetype)presenterWithChangeBlock:(DTDatePickerChangeBlock)resultBlock
++ (instancetype)presenterWithChangeBlock:(DTDatePickerChangeBlock)resultBlock
 {
     DTDatePickerPresenter * presenter = [self new];
-    
+
     presenter.changeBlock = resultBlock;
-    
+
     return presenter;
 }
 
--(void)dealloc
+- (void)dealloc
 {
     [_datePicker removeTarget:self action:NULL forControlEvents:UIControlEventValueChanged];
 }
 
--(void)setDatePicker:(UIDatePicker *)newDatePicker
+- (void)setDatePicker:(UIDatePicker *)newDatePicker
 {
     NSParameterAssert([newDatePicker isKindOfClass:[UIDatePicker class]]);
-    
+
     _datePicker = newDatePicker;
     [_datePicker addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
--(UIDatePicker *)datePicker
+- (UIDatePicker *)datePicker
 {
-    if (!_datePicker)
-    {
+    if (!_datePicker) {
         _datePicker = [UIDatePicker new];
         [_datePicker addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
     }
     return _datePicker;
 }
 
--(void)valueChanged:(UIDatePicker *)picker
+- (void)valueChanged:(UIDatePicker *)picker
 {
-    if (self.changeBlock)
-    {
+    if (self.changeBlock) {
         self.changeBlock(self.datePicker.date);
     }
 }

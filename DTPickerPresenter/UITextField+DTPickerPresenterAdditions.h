@@ -11,7 +11,8 @@
 
 @interface UITextField (DTPickerPresenterAdditions)
 
--(void)dt_setPresenter:(id)dt_presenter;
--(id)dt_presenter;
+- (void)dt_setPresenter:(id)dt_presenter;
+
+- (id)dt_presenter;
 
 @end
