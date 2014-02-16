@@ -10,7 +10,6 @@
 #import "DTDatePickerPresenter.h"
 #import "DTPickerViewPresenter.h"
 #import "DTPickerDatasource.h"
-#import "DTPickerPopoverController.h"
 #import "UIPopoverController+DTPickerPresenterAdditions.h"
 
 @interface PickerController () <UITableViewDataSource,UITableViewDelegate>
