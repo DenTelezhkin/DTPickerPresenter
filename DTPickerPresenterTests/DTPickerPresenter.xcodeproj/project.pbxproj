@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		412DA0F0123B42018D91BDAE /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BED449838F47B6899DB34A /* libPods-Specs.a */; };
+		9A22339B18B10F4900423899 /* UIPopoverController+DTPickerPresenterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22339A18B10F4900423899 /* UIPopoverController+DTPickerPresenterAdditions.m */; };
 		AA0CD1B718AB9B94008FE536 /* DTDatePickerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1B618AB9B94008FE536 /* DTDatePickerPresenter.m */; };
 		AA0CD1BA18AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1B918AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m */; };
 		AA0CD1C218ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1C118ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m */; };
@@ -39,6 +40,8 @@
 		20BF89A3F7814F11AE6EFC1D /* libPods-DTPickerPresenterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DTPickerPresenterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BED449838F47B6899DB34A /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F274B74E3843D79AA3A99E /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
+		9A22339918B10F4900423899 /* UIPopoverController+DTPickerPresenterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIPopoverController+DTPickerPresenterAdditions.h"; path = "../DTPickerPresenter/UIPopoverController+DTPickerPresenterAdditions.h"; sourceTree = "<group>"; };
+		9A22339A18B10F4900423899 /* UIPopoverController+DTPickerPresenterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIPopoverController+DTPickerPresenterAdditions.m"; path = "../DTPickerPresenter/UIPopoverController+DTPickerPresenterAdditions.m"; sourceTree = "<group>"; };
 		AA0CD1B518AB9B94008FE536 /* DTDatePickerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDatePickerPresenter.h; path = ../DTPickerPresenter/DTDatePickerPresenter.h; sourceTree = "<group>"; };
 		AA0CD1B618AB9B94008FE536 /* DTDatePickerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDatePickerPresenter.m; path = ../DTPickerPresenter/DTDatePickerPresenter.m; sourceTree = "<group>"; };
 		AA0CD1B818AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+DTPickerPresenterAdditions.h"; path = "../DTPickerPresenter/UITextField+DTPickerPresenterAdditions.h"; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 		AA83F53318AD0A3000332F23 /* UIKit+DTPickerPresenter */ = {
 			isa = PBXGroup;
 			children = (
+				9A22339918B10F4900423899 /* UIPopoverController+DTPickerPresenterAdditions.h */,
+				9A22339A18B10F4900423899 /* UIPopoverController+DTPickerPresenterAdditions.m */,
 				AA0CD1B818AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.h */,
 				AA0CD1B918AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m */,
 			);
@@ -358,6 +363,7 @@
 			files = (
 				AA0CD1B718AB9B94008FE536 /* DTDatePickerPresenter.m in Sources */,
 				AA1C78CB18A904FC00DC8AD1 /* main.m in Sources */,
+				9A22339B18B10F4900423899 /* UIPopoverController+DTPickerPresenterAdditions.m in Sources */,
 				AA0CD1BA18AB9F6E008FE536 /* UITextField+DTPickerPresenterAdditions.m in Sources */,
 				AA64F2AB18A90B9A006E3455 /* PickerController.m in Sources */,
 				AA1C78BD18A9026C00DC8AD1 /* DTPickerViewPresenter.m in Sources */,
