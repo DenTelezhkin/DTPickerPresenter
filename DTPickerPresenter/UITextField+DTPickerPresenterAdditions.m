@@ -22,10 +22,10 @@
 
     objc_setAssociatedObject(self, @selector(dt_presenter), presenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
-    if ([presenter isKindOfClass:[DTDatePickerPresenter class]]) {
+    if (datePicker) {
         [self dt_setDatePickerPresenter:presenter];
     }
-    else if ([presenter isKindOfClass:[DTPickerViewPresenter class]]) {
+    else if (picker) {
         [self dt_setPickerViewPresenter:presenter];
     }
 }
