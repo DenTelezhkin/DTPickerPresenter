@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PickerController : UIViewController
+@interface iPhonePickerController : UIViewController
 
 @end

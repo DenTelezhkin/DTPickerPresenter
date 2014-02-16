@@ -4,9 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="iPadPickerController">
             <connections>
-                <outlet property="tableView_iPad" destination="fcg-qj-E4p" id="thN-u8-3R3"/>
+                <outlet property="tableView" destination="fcg-qj-E4p" id="xwq-1R-dCO"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -20,8 +20,8 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="Qsv-bk-SNY"/>
-                        <outlet property="delegate" destination="-1" id="dxa-xV-hPA"/>
+                        <outlet property="dataSource" destination="-1" id="gaR-6m-O8H"/>
+                        <outlet property="delegate" destination="-1" id="yn3-0t-ucj"/>
                     </connections>
                 </tableView>
             </subviews>

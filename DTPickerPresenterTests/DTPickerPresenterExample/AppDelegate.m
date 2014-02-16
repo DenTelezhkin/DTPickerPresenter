@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "PickerController.h"
+#import "iPhonePickerController.h"
+#import "iPadPickerController.h"
 
 @implementation AppDelegate
 
@@ -16,7 +17,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
-    PickerController * controller = [PickerController new];
+    UIViewController * controller;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        controller = [iPadPickerController new];
+    }
+    else {
+        controller = [iPhonePickerController new];
+    }
     self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     return YES;
