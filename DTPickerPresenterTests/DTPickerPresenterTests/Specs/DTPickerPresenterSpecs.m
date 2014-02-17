@@ -8,52 +8,53 @@
 
 #import <XCTest/XCTest.h>
 #import "DTPickerViewPresenter.h"
+#import "UIPopoverController+DTPickerPresenterAdditions.h"
 
 @interface DTPickerPresenterSpecs : XCTestCase
-
+@property (nonatomic, strong) DTPickerViewPresenter * presenter;
 @end
 
 @implementation DTPickerPresenterSpecs
 
-
-- (void)testExample
+- (void)setUp
 {
-    DTPickerViewPresenter * presenter = [DTPickerViewPresenter presenterWithDatasource:nil
-                                                                           changeBlock:
-        ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
+    [super setUp];
 
-        }
-    ];
+    self.presenter = [DTPickerViewPresenter presenterWithDatasource:nil changeBlock:^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
 
-    UITextField * textfield = [UITextField new];
-
-    [textfield dt_setPresenter:presenter];
-
-    expect([textfield dt_presenter]).to.equal(presenter);
+    }];
 }
 
-- (void)testTextfieldDoesNotAcceptPresenterWithoutBlock
+- (void)testPresenterObject
 {
-    DTPickerViewPresenter * presenter = [DTPickerViewPresenter presenterWithDatasource:nil changeBlock:nil];
-
     UITextField * textfield = [UITextField new];
 
-    expect(^{
-        [textfield dt_setPresenter:presenter];
-    }).to.raiseAny();
+    [textfield dt_setPresenter:self.presenter];
+
+    expect([textfield dt_presenter]).to.equal(self.presenter);
 }
 
 - (void)testInputView
 {
-    DTPickerViewPresenter * presenter = [DTPickerViewPresenter presenterWithDatasource:nil changeBlock:^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
-
-    }];
-
     UITextField * textfield = [UITextField new];
 
-    [textfield dt_setPresenter:presenter];
+    [textfield dt_setPresenter:self.presenter];
 
-    expect(textfield.inputView).to.equal(presenter.pickerView);
+    expect(textfield.inputView).to.equal(self.presenter.pickerView);
+}
+
+- (void)testPopoverPresenter
+{
+    UIPopoverController * controller = [UIPopoverController dt_popoverWithPresenter:self.presenter];
+    expect([controller dt_presenter]).to.equal(self.presenter);
+}
+
+- (void)testDatePickerAddedAsSubview
+{
+    UIPopoverController * controller = [UIPopoverController dt_popoverWithPresenter:self.presenter];
+
+    UIViewController * contentController = [controller contentViewController];
+    expect(self.presenter.pickerView.superview).to.equal(contentController.view);
 }
 
 @end

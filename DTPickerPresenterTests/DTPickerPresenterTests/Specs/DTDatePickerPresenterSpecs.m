@@ -9,46 +9,57 @@
 #import <XCTest/XCTest.h>
 #import "DTDatePickerPresenter.h"
 #import "UITextField+DTPickerPresenterAdditions.h"
+#import "UIPopoverController+DTPickerPresenterAdditions.h"
 
 @interface DTDatePickerPresenterSpecs : XCTestCase
-
+@property (nonatomic, strong) DTDatePickerPresenter * presenter;
 @end
 
 @implementation DTDatePickerPresenterSpecs
 
-- (void)testAssociatedObjects
+-(void)setUp
 {
-    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate) {
+    [super setUp];
+
+    self.presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate) {
     }];
-
-    UITextField * textfield = [UITextField new];
-
-    [textfield dt_setPresenter:presenter];
-
-    expect([textfield dt_presenter]).to.equal(presenter);
 }
 
-- (void)testTextfieldDoesNotAcceptPresenterWithoutBlock
+- (void)tearDown
 {
-    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:nil];
+    [super tearDown];
+    self.presenter = nil;
+}
 
+- (void)testAssociatedObjects
+{
     UITextField * textfield = [UITextField new];
 
-    expect(^{
-        [textfield dt_setPresenter:presenter];
-    }).to.raiseAny();
+    [textfield dt_setPresenter:self.presenter];
+
+    expect([textfield dt_presenter]).to.equal(self.presenter);
 }
 
 - (void)testInputView
 {
-    DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate) {
-    }];
-
     UITextField * textfield = [UITextField new];
 
-    [textfield dt_setPresenter:presenter];
+    [textfield dt_setPresenter:self.presenter];
 
-    expect(textfield.inputView).to.equal(presenter.datePicker);
+    expect(textfield.inputView).to.equal(self.presenter.datePicker);
 }
 
+-(void)testPopoverPresenter
+{
+    UIPopoverController * controller = [UIPopoverController dt_popoverWithPresenter:self.presenter];
+    expect([controller dt_presenter]).to.equal(self.presenter);
+}
+
+-(void)testDatePickerAddedAsSubview
+{
+    UIPopoverController * controller = [UIPopoverController dt_popoverWithPresenter:self.presenter];
+
+    UIViewController * contentController = [controller contentViewController];
+    expect(self.presenter.datePicker.superview).to.equal(contentController.view);
+}
 @end
