@@ -31,7 +31,7 @@
     [self.datePickerTextField dt_setPresenter:presenter];
     
     // Wheel picker
-    
+
     DTPickerDataSource * datasource = [DTPickerDataSource datasourceWithItems:@[@[@"foo", @"bar", @"cat"], @[@"OMG!", @"WTF!"]]];
     
     DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {

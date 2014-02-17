@@ -50,15 +50,16 @@ static NSString * const iPadCell = @"iPadMenuCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    __weak typeof (self) weakSelf = self;
     switch (indexPath.row)
     {
         case 0:
         {
-            __weak typeof (self) weakSelf = self;
             DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate) {
-//                weakSelf.datePickerTextField.text = [selectedDate description];
+                NSString * newDate = [selectedDate description];
+                weakSelf.tableItems = @[newDate,weakSelf.tableItems[1]];
+                [weakSelf.tableView reloadData];
             }];
-
             self.popover = [UIPopoverController dt_popoverWithPresenter:presenter];
             break;
         }
@@ -67,7 +68,9 @@ static NSString * const iPadCell = @"iPadMenuCell";
             DTPickerDataSource * datasource = [DTPickerDataSource datasourceWithItems:@[@[@"foo", @"bar", @"cat"], @[@"OMG!", @"WTF!"]]];
             
             DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
-//                weakSelf.wheelPickerTextField.text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
+                NSString * text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
+                weakSelf.tableItems = @[weakSelf.tableItems[0],text];
+                [weakSelf.tableView reloadData];
             };
             DTPickerViewPresenter * wheelPresenter = [DTPickerViewPresenter presenterWithDatasource:datasource
                                                                                         changeBlock:block];
