@@ -31,6 +31,7 @@
         _pickerView = [UIPickerView new];
         _pickerView.dataSource = self.dataSource;
         _pickerView.delegate = self.dataSource;
+        _pickerView.showsSelectionIndicator = YES;
     }
     return _pickerView;
 }
