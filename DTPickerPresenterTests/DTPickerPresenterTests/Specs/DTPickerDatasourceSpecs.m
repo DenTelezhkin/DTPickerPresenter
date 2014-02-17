@@ -22,4 +22,23 @@
     }).to.raiseAny();
 }
 
+-(void)testAttributedStrings
+{
+    NSAttributedString * string1 = [[NSAttributedString alloc] initWithString:@"foo"];
+    NSString * string2 = @"bar";
+    DTPickerDataSource * dataSource = [DTPickerDataSource datasourceWithItems:@[@[string1,string2]]];
+
+    expect([dataSource pickerView:nil attributedTitleForRow:0 forComponent:0]).to.equal(string1);
+    expect([dataSource pickerView:nil attributedTitleForRow:1 forComponent:0]).to.equal(nil);
+}
+
+-(void)testNSStings
+{
+    NSAttributedString * string1 = [[NSAttributedString alloc] initWithString:@"foo"];
+    NSString * string2 = @"bar";
+    DTPickerDataSource * dataSource = [DTPickerDataSource datasourceWithItems:@[@[string1,string2]]];
+
+    expect([dataSource pickerView:nil titleForRow:1 forComponent:0]).to.equal(string2);
+}
+
 @end

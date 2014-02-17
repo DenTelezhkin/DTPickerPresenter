@@ -49,8 +49,13 @@
     return self.items[component][row];
 }
 
-- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSUInteger)row forComponent:(NSUInteger)component
 {
+    if ([self.items[component][row] isKindOfClass:[NSAttributedString class]])
+    {
+        return self.items[component][row];
+    }
+
     return nil;
 }
 
