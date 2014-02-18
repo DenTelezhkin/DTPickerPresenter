@@ -19,7 +19,7 @@ end
  
 desc "Run #{scheme_name} tests"
 task :run_tests do
-  $tests_success = run("xcodebuild -scheme \"#{scheme_name}\" -workspace #{workspace_file} -destination 'name=iPhone Retina (4-inch),OS=7.0' clean test | xcpretty -tc; exit ${PIPESTATUS[0]}")
+  $tests_success = run("xcodebuild -scheme \"#{scheme_name}\" -workspace #{workspace_file} -destination 'name=iPad Retina (64-bit),OS=7.0' clean test | xcpretty -tc; exit ${PIPESTATUS[0]}")
 end
 
 desc "Test and compile #{scheme_name}"
