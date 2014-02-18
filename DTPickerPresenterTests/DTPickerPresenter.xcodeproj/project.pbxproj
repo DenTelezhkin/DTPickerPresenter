@@ -133,9 +133,9 @@
 				AA1C788D18A9024E00DC8AD1 /* Supporting Files */,
 				AA64F2A818A90B9A006E3455 /* iPhonePickerController.h */,
 				AA64F2A918A90B9A006E3455 /* iPhonePickerController.m */,
+				AA64F2AA18A90B9A006E3455 /* iPhonePickerController.xib */,
 				9A22339F18B113AD00423899 /* iPadPickerController.h */,
 				9A2233A018B113AD00423899 /* iPadPickerController.m */,
-				AA64F2AA18A90B9A006E3455 /* iPhonePickerController.xib */,
 				AA83F53418AD0C1800332F23 /* iPadPickerController.xib */,
 			);
 			name = Example;

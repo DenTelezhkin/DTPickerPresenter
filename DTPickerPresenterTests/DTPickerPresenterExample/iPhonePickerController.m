@@ -42,4 +42,9 @@
     [self.wheelPickerTextField dt_setPresenter:wheelPresenter];
 }
 
+- (IBAction)viewTapped:(UITapGestureRecognizer *)sender
+{
+    [self.datePickerTextField resignFirstResponder];
+    [self.wheelPickerTextField resignFirstResponder];
+}
 @end
