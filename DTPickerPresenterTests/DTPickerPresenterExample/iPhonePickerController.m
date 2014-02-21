@@ -7,10 +7,7 @@
 //
 
 #import "iPhonePickerController.h"
-#import "DTDatePickerPresenter.h"
-#import "DTPickerViewPresenter.h"
-#import "DTPickerDatasource.h"
-#import "UITextField+DTPickerPresenter.h"
+#import "DTPickerPresenter.h"
 
 @interface iPhonePickerController () 
 @property (weak, nonatomic) IBOutlet UITextField * datePickerTextField;
