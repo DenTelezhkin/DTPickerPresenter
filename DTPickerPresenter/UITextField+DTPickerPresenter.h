@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DTDatePickerPresenter.h"
 
-@interface UITextField (DTPickerPresenterAdditions)
+@interface UITextField (DTPickerPresenter)
 
 - (void)dt_setPresenter:(id)dt_presenter;
 

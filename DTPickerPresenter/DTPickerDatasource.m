@@ -51,8 +51,7 @@
 
 - (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSUInteger)row forComponent:(NSUInteger)component
 {
-    if ([self.items[component][row] isKindOfClass:[NSAttributedString class]])
-    {
+    if ([self.items[component][row] isKindOfClass:[NSAttributedString class]]) {
         return self.items[component][row];
     }
 

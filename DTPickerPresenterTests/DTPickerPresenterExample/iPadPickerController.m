@@ -10,7 +10,7 @@
 #import "DTDatePickerPresenter.h"
 #import "DTPickerViewPresenter.h"
 #import "DTPickerDatasource.h"
-#import "UIPopoverController+DTPickerPresenterAdditions.h"
+#import "UIPopoverController+DTPickerPresenter.h"
 
 @interface iPadPickerController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

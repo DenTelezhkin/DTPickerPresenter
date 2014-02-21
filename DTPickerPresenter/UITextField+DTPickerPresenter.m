@@ -6,12 +6,11 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import "UITextField+DTPickerPresenterAdditions.h"
-#import "DTDatePickerPresenter.h"
+#import "UITextField+DTPickerPresenter.h"
 #import "DTPickerViewPresenter.h"
 #import <objc/runtime.h>
 
-@implementation UITextField (DTPickerPresenterAdditions)
+@implementation UITextField (DTPickerPresenter)
 
 - (void)dt_setPresenter:(id)presenter
 {
@@ -23,10 +22,10 @@
     objc_setAssociatedObject(self, @selector(dt_presenter), presenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
     if (datePicker) {
-        self.inputView = [(DTDatePickerPresenter * )presenter datePicker];
+        self.inputView = [(DTDatePickerPresenter *)presenter datePicker];
     }
     else if (picker) {
-        self.inputView = [(DTPickerViewPresenter * )presenter pickerView];
+        self.inputView = [(DTPickerViewPresenter *)presenter pickerView];
     }
 }
 

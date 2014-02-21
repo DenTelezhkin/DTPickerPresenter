@@ -3,9 +3,7 @@
 // Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface UIPopoverController (DTPickerPresenterAdditions)
+@interface UIPopoverController (DTPickerPresenter)
 
 + (UIPopoverController *)dt_popoverWithPresenter:(id)presenter ofSize:(CGSize)size;
 

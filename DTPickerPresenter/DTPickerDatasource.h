@@ -6,10 +6,9 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "DTPickerViewDatasource.h"
+#import "DTPickerDatasourceProtocol.h"
 
-@interface DTPickerDataSource : NSObject <DTPickerViewDatasource>
+@interface DTPickerDataSource : NSObject <DTPickerDatasourceProtocol>
 
 + (instancetype)datasourceWithItems:(NSArray *)items;
 

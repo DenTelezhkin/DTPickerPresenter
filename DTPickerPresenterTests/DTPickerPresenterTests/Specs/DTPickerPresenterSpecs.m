@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import "DTPickerViewPresenter.h"
-#import "UIPopoverController+DTPickerPresenterAdditions.h"
+#import "UIPopoverController+DTPickerPresenter.h"
+#import "UITextField+DTPickerPresenter.h"
 
 @interface DTPickerPresenterSpecs : XCTestCase
 @property (nonatomic, strong) DTPickerViewPresenter * presenter;

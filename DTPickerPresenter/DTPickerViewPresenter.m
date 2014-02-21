@@ -1,6 +1,6 @@
 //
 //  DTPickerViewPresenter.m
-//  LiverpoolOne
+//  DTPickerPresenter
 //
 //  Created by Denys Telezhkin on 30.01.14.
 //  Copyright (c) 2014 MLSDev. All rights reserved.
@@ -13,7 +13,9 @@
 
 @implementation DTPickerViewPresenter
 
-+ (instancetype)presenterWithDatasource:(id <DTPickerViewDatasource>)dataSource
+@synthesize pickerView=_pickerView;
+
++ (instancetype)presenterWithDatasource:(id <DTPickerDatasourceProtocol>)dataSource
                             changeBlock:(DTPickerChangeBlock)changeBlock
 {
     DTPickerViewPresenter * presenter = [self new];
@@ -23,6 +25,13 @@
     presenter.changeBlock = changeBlock;
 
     return presenter;
+}
+
+- (void)setPickerView:(UIPickerView *)pickerView
+{
+    NSParameterAssert([pickerView isKindOfClass:[UIPickerView class]]);
+
+    _pickerView = pickerView;
 }
 
 - (UIPickerView *)pickerView

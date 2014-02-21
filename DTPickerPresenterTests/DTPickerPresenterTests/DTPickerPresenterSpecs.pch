@@ -13,7 +13,7 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
+#import <XCTest/XCTest.h>
 #define EXP_SHORTHAND
 #import "Expecta.h"
 

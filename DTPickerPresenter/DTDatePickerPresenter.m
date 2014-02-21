@@ -12,11 +12,11 @@
 
 @synthesize datePicker = _datePicker;
 
-+ (instancetype)presenterWithChangeBlock:(DTDatePickerChangeBlock)resultBlock
++ (instancetype)presenterWithChangeBlock:(DTDatePickerChangeBlock)changeBlock
 {
     DTDatePickerPresenter * presenter = [self new];
 
-    presenter.changeBlock = resultBlock;
+    presenter.changeBlock = changeBlock;
 
     return presenter;
 }
