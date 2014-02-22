@@ -20,7 +20,7 @@
 {
     [super setUp];
 
-    self.presenter = [DTPickerViewPresenter presenterWithDatasource:nil changeBlock:^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
+    self.presenter = [DTPickerViewPresenter presenterWithDatasource:nil changeBlock:^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath) {
 
     }];
 }
