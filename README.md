@@ -98,7 +98,7 @@ DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * select
 };
 ```
 
-Now, with datasource and presenter stuff out of the way, let talk about presentation.
+Presentation is identical to UIDatePicker earlier.
 
 #### iPhone
 
