@@ -64,7 +64,7 @@ static NSString * const iPadCell = @"iPadMenuCell";
         {
             DTPickerDataSource * datasource = [DTPickerDataSource datasourceWithItems:@[@[@"foo", @"bar", @"cat"], @[@"OMG!", @"WTF!"]]];
             
-            DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
+            DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath) {
                 NSString * text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
                 weakSelf.tableItems = @[weakSelf.tableItems[0],text];
                 [weakSelf.tableView reloadData];

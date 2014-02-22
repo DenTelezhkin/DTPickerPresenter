@@ -32,9 +32,9 @@
 
     DTPickerDataSource * datasource = [DTPickerDataSource datasourceWithItems:@[@[@"foo", @"bar", @"cat"], @[@"OMG!", @"WTF!"]]];
     
-    DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled) {
-        weakSelf.wheelPickerTextField.text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
-    };
+    DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath) {
+            weakSelf.wheelPickerTextField.text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
+        };
     DTPickerViewPresenter * wheelPresenter = [DTPickerViewPresenter presenterWithDatasource:datasource
                                                                                 changeBlock:block];
     [self.wheelPickerTextField dt_setPresenter:wheelPresenter];
@@ -45,4 +45,6 @@
     [self.datePickerTextField resignFirstResponder];
     [self.wheelPickerTextField resignFirstResponder];
 }
+
+
 @end

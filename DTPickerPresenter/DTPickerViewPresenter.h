@@ -25,7 +25,7 @@
 
 #import "DTPickerDatasourceProtocol.h"
 
-typedef void(^DTPickerChangeBlock)(NSArray * selectedComponents, NSIndexPath * selectedIndexPath, BOOL wasCancelled);
+typedef void(^DTPickerChangeBlock)(NSArray * selectedComponents, NSIndexPath * selectedIndexPath);
 
 /**
  `DTPickerViewPresenter` manages UIPickerView presentation and wraps UIPickerViewDelegate callbacks into nice, modern block API. While datasource is a separate class, presenter needs to be notified when UIPickerView values change. Which is datasource needs to call presenter when that happens. If you use default datasource class provided - `DTPickerDatasource`, this happens automatically.

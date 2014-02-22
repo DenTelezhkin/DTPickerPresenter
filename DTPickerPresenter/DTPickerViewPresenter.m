@@ -79,7 +79,7 @@
         [resultsArray addObject:[self.dataSource.items[position] objectAtIndex:selectedValue]];
     }
 
-    self.changeBlock([resultsArray copy], selectedIndexPath, NO);
+    self.changeBlock([resultsArray copy], selectedIndexPath);
 }
 
 @end
