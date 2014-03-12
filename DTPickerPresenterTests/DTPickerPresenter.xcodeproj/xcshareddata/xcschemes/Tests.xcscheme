@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-               BuildableName = "DTPickerPresenterExample.app"
-               BlueprintName = "DTPickerPresenterExample"
+               BlueprintIdentifier = "AA1C789D18A9024E00DC8AD1"
+               BuildableName = "DTPickerPresenter.xctest"
+               BlueprintName = "Specs"
                ReferencedContainer = "container:DTPickerPresenter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -39,15 +39,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-            BuildableName = "DTPickerPresenterExample.app"
-            BlueprintName = "DTPickerPresenterExample"
-            ReferencedContainer = "container:DTPickerPresenter.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -58,15 +49,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-            BuildableName = "DTPickerPresenterExample.app"
-            BlueprintName = "DTPickerPresenterExample"
-            ReferencedContainer = "container:DTPickerPresenter.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -76,15 +58,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-            BuildableName = "DTPickerPresenterExample.app"
-            BlueprintName = "DTPickerPresenterExample"
-            ReferencedContainer = "container:DTPickerPresenter.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
