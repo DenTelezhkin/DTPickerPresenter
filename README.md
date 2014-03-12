@@ -103,7 +103,7 @@ self.popover = [UIPopoverController dt_popoverWithPresenter:wheelPresenter];
 ## Installation
 
 ```
-pod 'DTPickerPresenter', '~> 0.1.0'
+pod 'DTPickerPresenter', '~> 0.1.1'
 ```
 
 ## Best practices
