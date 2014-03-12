@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-               BuildableName = "DTPickerPresenterExample.app"
+               BuildableName = "Example.app"
                BlueprintName = "Example"
                ReferencedContainer = "container:DTPickerPresenter.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-            BuildableName = "DTPickerPresenterExample.app"
+            BuildableName = "Example.app"
             BlueprintName = "Example"
             ReferencedContainer = "container:DTPickerPresenter.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-            BuildableName = "DTPickerPresenterExample.app"
+            BuildableName = "Example.app"
             BlueprintName = "Example"
             ReferencedContainer = "container:DTPickerPresenter.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA1C788218A9024E00DC8AD1"
-            BuildableName = "DTPickerPresenterExample.app"
+            BuildableName = "Example.app"
             BlueprintName = "Example"
             ReferencedContainer = "container:DTPickerPresenter.xcodeproj">
          </BuildableReference>
