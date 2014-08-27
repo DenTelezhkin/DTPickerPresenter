@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		412DA0F0123B42018D91BDAE /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29BED449838F47B6899DB34A /* libPods-Specs.a */; };
+		88FE4CEF19ADEA0C007562CD /* DTBasicPickerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FE4CEE19ADEA0C007562CD /* DTBasicPickerPresenter.m */; };
+		88FE4CF019ADEA0C007562CD /* DTBasicPickerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FE4CEE19ADEA0C007562CD /* DTBasicPickerPresenter.m */; };
+		88FE4CF619ADEE8A007562CD /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FE4CF419ADEE8A007562CD /* CustomViewController.m */; };
+		88FE4CF719ADEE8A007562CD /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FE4CF419ADEE8A007562CD /* CustomViewController.m */; };
+		88FE4CF819ADEE8A007562CD /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FE4CF519ADEE8A007562CD /* CustomViewController.xib */; };
+		88FE4CF919ADEE8A007562CD /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FE4CF519ADEE8A007562CD /* CustomViewController.xib */; };
 		9A22339B18B10F4900423899 /* UIPopoverController+DTPickerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22339A18B10F4900423899 /* UIPopoverController+DTPickerPresenter.m */; };
 		9A2233A118B113AD00423899 /* iPadPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2233A018B113AD00423899 /* iPadPickerController.m */; };
 		AA0CD1B718AB9B94008FE536 /* DTDatePickerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0CD1B618AB9B94008FE536 /* DTDatePickerPresenter.m */; };
@@ -40,6 +46,11 @@
 /* Begin PBXFileReference section */
 		20BF89A3F7814F11AE6EFC1D /* libPods-DTPickerPresenterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DTPickerPresenterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BED449838F47B6899DB34A /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88FE4CED19ADEA0C007562CD /* DTBasicPickerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTBasicPickerPresenter.h; path = ../DTPickerPresenter/DTBasicPickerPresenter.h; sourceTree = "<group>"; };
+		88FE4CEE19ADEA0C007562CD /* DTBasicPickerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTBasicPickerPresenter.m; path = ../DTPickerPresenter/DTBasicPickerPresenter.m; sourceTree = "<group>"; };
+		88FE4CF319ADEE8A007562CD /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomViewController.h; path = DTPickerPresenterExample/CustomViewController.h; sourceTree = SOURCE_ROOT; };
+		88FE4CF419ADEE8A007562CD /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomViewController.m; path = DTPickerPresenterExample/CustomViewController.m; sourceTree = SOURCE_ROOT; };
+		88FE4CF519ADEE8A007562CD /* CustomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomViewController.xib; path = DTPickerPresenterExample/CustomViewController.xib; sourceTree = SOURCE_ROOT; };
 		95F274B74E3843D79AA3A99E /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		95F46C5B18B81374005F006C /* DTPickerPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DTPickerPresenter.h; path = ../DTPickerPresenter/DTPickerPresenter.h; sourceTree = "<group>"; };
 		9A22339918B10F4900423899 /* UIPopoverController+DTPickerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIPopoverController+DTPickerPresenter.h"; path = "../DTPickerPresenter/UIPopoverController+DTPickerPresenter.h"; sourceTree = "<group>"; };
@@ -56,7 +67,7 @@
 		AA0CD1C618ABBC87008FE536 /* DTPickerDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerDatasource.m; path = ../DTPickerPresenter/DTPickerDatasource.m; sourceTree = "<group>"; };
 		AA0CD1C818ABBCE9008FE536 /* DTPickerDatasourceSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPickerDatasourceSpecs.m; path = DTPickerPresenterTests/Specs/DTPickerDatasourceSpecs.m; sourceTree = SOURCE_ROOT; };
 		AA0CD1CB18ABC818008FE536 /* DTPickerDatasourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DTPickerDatasourceProtocol.h; path = ../DTPickerPresenter/DTPickerDatasourceProtocol.h; sourceTree = "<group>"; };
-		AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTPickerPresenterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1C788318A9024E00DC8AD1 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C789018A9024E00DC8AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA1C789E18A9024E00DC8AD1 /* DTPickerPresenter.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTPickerPresenter.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C78B918A9026C00DC8AD1 /* DTPickerViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPickerViewPresenter.h; path = ../DTPickerPresenter/DTPickerViewPresenter.h; sourceTree = "<group>"; };
@@ -104,6 +115,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		88FE4CF119ADEA40007562CD /* BasePickerPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				88FE4CED19ADEA0C007562CD /* DTBasicPickerPresenter.h */,
+				88FE4CEE19ADEA0C007562CD /* DTBasicPickerPresenter.m */,
+			);
+			name = BasePickerPresenter;
+			sourceTree = "<group>";
+		};
 		AA1C787A18A9024E00DC8AD1 = {
 			isa = PBXGroup;
 			children = (
@@ -119,7 +139,7 @@
 		AA1C788418A9024E00DC8AD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */,
+				AA1C788318A9024E00DC8AD1 /* Example.app */,
 				AA1C789E18A9024E00DC8AD1 /* DTPickerPresenter.xctest */,
 			);
 			name = Products;
@@ -138,6 +158,9 @@
 				9A22339F18B113AD00423899 /* iPadPickerController.h */,
 				9A2233A018B113AD00423899 /* iPadPickerController.m */,
 				AA83F53418AD0C1800332F23 /* iPadPickerController.xib */,
+				88FE4CF319ADEE8A007562CD /* CustomViewController.h */,
+				88FE4CF419ADEE8A007562CD /* CustomViewController.m */,
+				88FE4CF519ADEE8A007562CD /* CustomViewController.xib */,
 			);
 			name = Example;
 			path = DTPickerPresenterTests;
@@ -181,6 +204,7 @@
 			children = (
 				95F46C5B18B81374005F006C /* DTPickerPresenter.h */,
 				AA83F53318AD0A3000332F23 /* UIKit+DTPickerPresenter */,
+				88FE4CF119ADEA40007562CD /* BasePickerPresenter */,
 				AA83F53218AD0A2300332F23 /* UIPickerView */,
 				AA83F53118AD0A1B00332F23 /* UIDatePicker */,
 			);
@@ -253,7 +277,7 @@
 			);
 			name = Example;
 			productName = DTPickerPresenterTests;
-			productReference = AA1C788318A9024E00DC8AD1 /* DTPickerPresenterExample.app */;
+			productReference = AA1C788318A9024E00DC8AD1 /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AA1C789D18A9024E00DC8AD1 /* Specs */ = {
@@ -314,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA83F53518AD0C1800332F23 /* iPadPickerController.xib in Resources */,
+				88FE4CF819ADEE8A007562CD /* CustomViewController.xib in Resources */,
 				AA1C78C618A904E700DC8AD1 /* Images.xcassets in Resources */,
 				AA1C789118A9024E00DC8AD1 /* InfoPlist.strings in Resources */,
 				AA64F2AC18A90B9A006E3455 /* iPhonePickerController.xib in Resources */,
@@ -325,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA1C78D418A9051C00DC8AD1 /* InfoPlist.strings in Resources */,
+				88FE4CF919ADEE8A007562CD /* CustomViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +397,9 @@
 				AA0CD1B718AB9B94008FE536 /* DTDatePickerPresenter.m in Sources */,
 				AA1C78CB18A904FC00DC8AD1 /* main.m in Sources */,
 				9A22339B18B10F4900423899 /* UIPopoverController+DTPickerPresenter.m in Sources */,
+				88FE4CF619ADEE8A007562CD /* CustomViewController.m in Sources */,
 				AA0CD1BA18AB9F6E008FE536 /* UITextField+DTPickerPresenter.m in Sources */,
+				88FE4CEF19ADEA0C007562CD /* DTBasicPickerPresenter.m in Sources */,
 				9A2233A118B113AD00423899 /* iPadPickerController.m in Sources */,
 				AA64F2AB18A90B9A006E3455 /* iPhonePickerController.m in Sources */,
 				AA1C78BD18A9026C00DC8AD1 /* DTPickerViewPresenter.m in Sources */,
@@ -385,7 +413,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0CD1C918ABBCE9008FE536 /* DTPickerDatasourceSpecs.m in Sources */,
+				88FE4CF719ADEE8A007562CD /* CustomViewController.m in Sources */,
 				AA0CD1C218ABAAB4008FE536 /* DTDatePickerPresenterSpecs.m in Sources */,
+				88FE4CF019ADEA0C007562CD /* DTBasicPickerPresenter.m in Sources */,
 				AA0CD1C418ABB2EB008FE536 /* DTPickerPresenterSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

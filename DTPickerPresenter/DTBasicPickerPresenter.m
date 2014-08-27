@@ -1,8 +1,8 @@
 //
-//  DTDatePickerPresenter.h
+//  DTBasicPickerPresenter.m
 //  DTPickerPresenter
 //
-//  Created by Denys Telezhkin on 12.02.14.
+//  Created by Jose Manuel Navarro on 27.08.14.
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,34 +22,18 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
 #import "DTBasicPickerPresenter.h"
 
-typedef void(^DTDatePickerChangeBlock)(NSDate * selectedDate);
+@implementation DTBasicPickerPresenter
 
-/**
- `DTDatePickerPresenter` manages UIDatePicker presentation and reacts to changes in it. This class does not depend on interface paradygm, or a way UIDatePicker is presented. UIDatePicker object is created and observed automatically.
- */
-@interface DTDatePickerPresenter : DTBasicPickerPresenter
++ (instancetype)presenterWithView:(UIView *)view
+{
+    DTBasicPickerPresenter * presenter = [self new];
 
-/**
- UIDatePicker object to present.
- */
+    presenter.presenterView = view;
 
-@property (nonatomic, strong) UIDatePicker * datePicker;
-
-/**
- Change block, that will be called automatically, whenever UIDatePicker value changes.
- */
-@property (nonatomic, copy) DTDatePickerChangeBlock changeBlock;
-
-/**
- Convenience method to create DTDatePickerPresenter instance.
- 
- @param changeBlock block to call, whenever value changes
- 
- @result instance of DTDatePickerPresenter object.
- */
-
-+ (instancetype)presenterWithChangeBlock:(DTDatePickerChangeBlock)changeBlock;
+    return presenter;
+}
 
 @end

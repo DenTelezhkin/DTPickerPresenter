@@ -21,8 +21,7 @@
 // THE SOFTWARE.
 
 #import "UIPopoverController+DTPickerPresenter.h"
-#import "DTDatePickerPresenter.h"
-#import "DTPickerViewPresenter.h"
+#import "DTBasicPickerPresenter.h"
 #import <objc/runtime.h>
 
 @implementation UIPopoverController (DTPickerPresenter)
@@ -32,27 +31,22 @@
     return [self dt_popoverWithPresenter:presenter ofSize:CGSizeMake(320, 216)];
 }
 
-+ (UIPopoverController *)dt_popoverWithPresenter:(id)presenter ofSize:(CGSize)size
++ (UIPopoverController *)dt_popoverWithPresenter:(DTBasicPickerPresenter *)presenter ofSize:(CGSize)size
 {
     UIViewController * controller = [UIViewController new];
 
-    if ([presenter isKindOfClass:[DTDatePickerPresenter class]]) {
-        [controller.view addSubview:[(DTDatePickerPresenter *)presenter datePicker]];
-    }
-    else if ([presenter isKindOfClass:[DTPickerViewPresenter class]]) {
-        [controller.view addSubview:[(DTPickerViewPresenter *)presenter pickerView]];
-    }
+    [controller.view addSubview:[presenter presenterView]];
 
     UIPopoverController * popover = [[UIPopoverController alloc] initWithContentViewController:controller];
 
     objc_setAssociatedObject(popover, @selector(dt_presenter), presenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
     [popover setPopoverContentSize:size];
-    return popover;
 
+    return popover;
 }
 
-- (id)dt_presenter
+- (DTBasicPickerPresenter *)dt_presenter
 {
     return objc_getAssociatedObject(self, @selector(dt_presenter));
 }

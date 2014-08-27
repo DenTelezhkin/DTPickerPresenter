@@ -8,11 +8,14 @@
 
 #import "iPadPickerController.h"
 #import "DTPickerPresenter.h"
+#import "CustomViewController.h"
 
 @interface iPadPickerController () <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray * tableItems;
+@property (nonatomic, strong) NSMutableArray * tableItems;
 @property (nonatomic, strong) UIPopoverController  * popover;
+@property (nonatomic, strong) CustomViewController *customViewController;
+
 @end
 
 @implementation iPadPickerController
@@ -24,7 +27,9 @@ static NSString * const iPadCell = @"iPadMenuCell";
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:iPadCell];
-    self.tableItems = @[@"Select date", @"Select from picker"];
+    self.tableItems = [[NSMutableArray alloc] initWithArray:@[@"Select date", @"Select from picker", @"Select from custom"]];
+
+	self.customViewController = [[CustomViewController alloc] initWithNibName:nil bundle:nil];
 }
 
 -(NSInteger)numberOfSectionsInTableView :(UITableView *)tableView
@@ -34,7 +39,7 @@ static NSString * const iPadCell = @"iPadMenuCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return self.tableItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,7 +59,7 @@ static NSString * const iPadCell = @"iPadMenuCell";
         {
             DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate) {
                 NSString * newDate = [selectedDate description];
-                weakSelf.tableItems = @[newDate,weakSelf.tableItems[1]];
+                weakSelf.tableItems[0] = newDate;
                 [weakSelf.tableView reloadData];
             }];
             self.popover = [UIPopoverController dt_popoverWithPresenter:presenter];
@@ -66,14 +71,23 @@ static NSString * const iPadCell = @"iPadMenuCell";
             
             DTPickerChangeBlock block = ^(NSArray * selectedComponents, NSIndexPath * selectedIndexPath) {
                 NSString * text = [selectedComponents.firstObject stringByAppendingFormat:@" - %@", selectedComponents.lastObject];
-                weakSelf.tableItems = @[weakSelf.tableItems[0],text];
+                weakSelf.tableItems[1] = text;
                 [weakSelf.tableView reloadData];
             };
             DTPickerViewPresenter * wheelPresenter = [DTPickerViewPresenter presenterWithDatasource:datasource
                                                                                         changeBlock:block];
             self.popover = [UIPopoverController dt_popoverWithPresenter:wheelPresenter];
-        }
             break;
+        }
+        case 2:
+        {
+		    DTBasicPickerPresenter *customPresenter = [DTBasicPickerPresenter presenterWithView:self.customViewController.view];
+
+			self.popover = [UIPopoverController dt_popoverWithPresenter:customPresenter];
+
+            break;
+        }
+
         default:
             break;
     }
