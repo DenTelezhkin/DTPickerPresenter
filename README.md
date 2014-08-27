@@ -5,7 +5,7 @@
 DTPickerPresenter
 =================
 
-DTPickerPresenter is clean and modern wrapper for UIDatePicker and UIPickerView. It provides easy way to present UIDatePicker and UIPickerView both on iPhone and iPad with very little amount of code. For example, presenting UIDatePicker is just two lines of code:
+DTPickerPresenter is clean and modern wrapper for UIDatePicker and UIPickerView. It provides easy way to present UIDatePicker UIPickerView, and any arbitrary UIView both on iPhone and iPad with very little amount of code. For example, presenting UIDatePicker is just two lines of code:
 
 ```objective-c
 DTDatePickerPresenter * presenter = [DTDatePickerPresenter presenterWithChangeBlock:^(NSDate * selectedDate) {
@@ -103,7 +103,7 @@ self.popover = [UIPopoverController dt_popoverWithPresenter:wheelPresenter];
 ## Installation
 
 ```
-pod 'DTPickerPresenter', '~> 0.1.1'
+pod 'DTPickerPresenter', '~> 0.2.0'
 ```
 
 ## Best practices
