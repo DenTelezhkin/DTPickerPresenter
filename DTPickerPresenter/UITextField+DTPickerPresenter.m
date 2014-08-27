@@ -24,29 +24,19 @@
 // THE SOFTWARE.
 
 #import "UITextField+DTPickerPresenter.h"
-#import "DTPickerViewPresenter.h"
+#import "DTBasicPickerPresenter.h"
 #import <objc/runtime.h>
 
 @implementation UITextField (DTPickerPresenter)
 
-- (void)dt_setPresenter:(id)presenter
+- (void)dt_setPresenter:(DTBasicPickerPresenter *)presenter
 {
-    BOOL datePicker = [presenter isKindOfClass:[DTDatePickerPresenter class]];
-    BOOL picker = [presenter isKindOfClass:[DTPickerViewPresenter class]];
-
-    NSAssert(datePicker || picker, @"Picker presenter should be either DTDatePickerPresenter or DTPickerViewPresenter");
-
     objc_setAssociatedObject(self, @selector(dt_presenter), presenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
-    if (datePicker) {
-        self.inputView = [(DTDatePickerPresenter *)presenter datePicker];
-    }
-    else if (picker) {
-        self.inputView = [(DTPickerViewPresenter *)presenter pickerView];
-    }
+    self.inputView = [presenter presenterView];
 }
 
-- (id)dt_presenter
+- (DTBasicPickerPresenter *)dt_presenter
 {
     return objc_getAssociatedObject(self, @selector(dt_presenter));
 }

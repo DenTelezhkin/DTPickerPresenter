@@ -62,6 +62,18 @@
     return _pickerView;
 }
 
+#pragma mark - Base presenter view
+
+- (UIView *)presenterView {
+	return self.pickerView;
+}
+
+- (void)setPresenterView:(UIView *)presenterView {
+	if ([presenterView isKindOfClass:[UIPickerView class]]) {
+		self.pickerView = (UIPickerView *)presenterView;
+	}
+}
+
 #pragma mark - UIPickerViewDelegate
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component

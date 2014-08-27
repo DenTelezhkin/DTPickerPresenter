@@ -60,6 +60,18 @@
     return _datePicker;
 }
 
+#pragma mark - Base presenter view
+
+- (UIView *)presenterView {
+	return self.datePicker;
+}
+
+- (void)setPresenterView:(UIView *)presenterView {
+	if ([presenterView isKindOfClass:[UIDatePicker class]]) {
+		self.datePicker = (UIDatePicker *)presenterView;
+	}
+}
+
 - (void)valueChanged:(UIDatePicker *)picker
 {
     if (self.changeBlock) {

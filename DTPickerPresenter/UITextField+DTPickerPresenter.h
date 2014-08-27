@@ -24,12 +24,13 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-#import "DTDatePickerPresenter.h"
+
+@class DTBasicPickerPresenter;
 
 @interface UITextField (DTPickerPresenter)
 
-- (void)dt_setPresenter:(id)dt_presenter;
+- (void)dt_setPresenter:(DTBasicPickerPresenter *)dt_presenter;
 
-- (id)dt_presenter;
+- (DTBasicPickerPresenter *)dt_presenter;
 
 @end
