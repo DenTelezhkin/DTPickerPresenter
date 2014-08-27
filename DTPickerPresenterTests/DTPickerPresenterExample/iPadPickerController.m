@@ -81,7 +81,7 @@ static NSString * const iPadCell = @"iPadMenuCell";
         }
         case 2:
         {
-		    DTBasicPickerPresenter *customPresenter = [DTBasicPickerPresenter presenterWithView:self.customViewController.view];
+		    DTViewPresenter *customPresenter = [DTViewPresenter presenterWithView:self.customViewController.view];
 
 			self.popover = [UIPopoverController dt_popoverWithPresenter:customPresenter];
 

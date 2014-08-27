@@ -1,5 +1,5 @@
 //
-//  DTBasicPickerPresenter.h
+//  DTBasicPickerPresenter.m
 //  DTPickerPresenter
 //
 //  Created by Jose Manuel Navarro on 27.08.14.
@@ -23,21 +23,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "DTViewPresenter.h"
 
-@interface DTBasicPickerPresenter : NSObject
+@implementation DTViewPresenter
 
-/**
- UIView object, that is managed by DTPickerViewPresenter.
- */
-@property (nonatomic, strong) UIView * presenterView;
-
-/**
- Convenience method to create DTBasicViewPresenter.
- 
- @result instance of DTBasicViewPresenter object.
- */
-+ (instancetype)presenterWithView:(UIView *)view;
-
++ (instancetype)presenterWithView:(UIView *)view
+{
+    NSParameterAssert([view isKindOfClass:[UIView class]]);
+    
+    DTViewPresenter * presenter = [self new];
+    presenter.presenterView = view;
+    return presenter;
+}
 
 @end

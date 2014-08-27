@@ -1,5 +1,5 @@
 //
-//  DTBasicPickerPresenter.m
+//  DTBasicPickerPresenter.h
 //  DTPickerPresenter
 //
 //  Created by Jose Manuel Navarro on 27.08.14.
@@ -23,17 +23,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "DTBasicPickerPresenter.h"
+#import "DTViewPresentation.h"
 
-@implementation DTBasicPickerPresenter
+/**
+ DTViewPresenter is a generic wrapper, that allows showing arbitrary UIView, for example as an inputView for UITextField.
+ */
 
-+ (instancetype)presenterWithView:(UIView *)view
-{
-    DTBasicPickerPresenter * presenter = [self new];
+@interface DTViewPresenter : NSObject <DTViewPresentation>
 
-    presenter.presenterView = view;
+/**
+ Getter for presented view.
+ */
+@property (nonatomic, strong) UIView * presenterView;
 
-    return presenter;
-}
+/**
+ Convenience method to create DTViewPresenter.
+ 
+ @result instance of DTBasicViewPresenter object.
+ */
++ (instancetype)presenterWithView:(UIView *)view;
+
 
 @end

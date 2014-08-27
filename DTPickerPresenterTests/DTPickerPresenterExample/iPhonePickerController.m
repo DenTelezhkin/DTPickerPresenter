@@ -8,7 +8,7 @@
 
 #import "iPhonePickerController.h"
 #import "DTPickerPresenter.h"
-#import "DTBasicPickerPresenter.h"
+#import "DTViewPresenter.h"
 #import "CustomViewController.h"
 
 @interface iPhonePickerController () 
@@ -45,12 +45,10 @@
     [self.wheelPickerTextField dt_setPresenter:wheelPresenter];
 
     // Custom picker
-    
-    DTBasicPickerPresenter *customPresenter = [[DTBasicPickerPresenter alloc] init];
 
 	self.customViewController = [[CustomViewController alloc] initWithNibName:nil bundle:nil];
 
-	customPresenter.presenterView = self.customViewController.view;
+	DTViewPresenter *customPresenter = [DTViewPresenter presenterWithView:self.customViewController.view];
 
     [self.customPickerTextField dt_setPresenter:customPresenter];
 }

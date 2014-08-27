@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "UIPopoverController+DTPickerPresenter.h"
-#import "DTBasicPickerPresenter.h"
 #import <objc/runtime.h>
 
 @implementation UIPopoverController (DTPickerPresenter)
@@ -31,7 +30,7 @@
     return [self dt_popoverWithPresenter:presenter ofSize:CGSizeMake(320, 216)];
 }
 
-+ (UIPopoverController *)dt_popoverWithPresenter:(DTBasicPickerPresenter *)presenter ofSize:(CGSize)size
++ (UIPopoverController *)dt_popoverWithPresenter:(id <DTViewPresentation>)presenter ofSize:(CGSize)size
 {
     UIViewController * controller = [UIViewController new];
 
@@ -46,7 +45,7 @@
     return popover;
 }
 
-- (DTBasicPickerPresenter *)dt_presenter
+- (id <DTViewPresentation>)dt_presenter
 {
     return objc_getAssociatedObject(self, @selector(dt_presenter));
 }

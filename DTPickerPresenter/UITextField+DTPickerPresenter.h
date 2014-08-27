@@ -23,14 +23,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
-
-@class DTBasicPickerPresenter;
+#import "DTViewPresentation.h"
 
 @interface UITextField (DTPickerPresenter)
 
-- (void)dt_setPresenter:(DTBasicPickerPresenter *)dt_presenter;
+- (void)dt_setPresenter:(id <DTViewPresentation>)dt_presenter;
 
-- (DTBasicPickerPresenter *)dt_presenter;
+- (id <DTViewPresentation>)dt_presenter;
 
 @end

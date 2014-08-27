@@ -24,19 +24,19 @@
 // THE SOFTWARE.
 
 #import "UITextField+DTPickerPresenter.h"
-#import "DTBasicPickerPresenter.h"
+#import "DTViewPresenter.h"
 #import <objc/runtime.h>
 
 @implementation UITextField (DTPickerPresenter)
 
-- (void)dt_setPresenter:(DTBasicPickerPresenter *)presenter
+- (void)dt_setPresenter:(DTViewPresenter *)presenter
 {
     objc_setAssociatedObject(self, @selector(dt_presenter), presenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
     self.inputView = [presenter presenterView];
 }
 
-- (DTBasicPickerPresenter *)dt_presenter
+- (DTViewPresenter *)dt_presenter
 {
     return objc_getAssociatedObject(self, @selector(dt_presenter));
 }

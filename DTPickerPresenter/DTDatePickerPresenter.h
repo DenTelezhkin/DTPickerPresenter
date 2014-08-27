@@ -22,14 +22,15 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-#import "DTBasicPickerPresenter.h"
+
+#import "DTViewPresentation.h"
 
 typedef void(^DTDatePickerChangeBlock)(NSDate * selectedDate);
 
 /**
  `DTDatePickerPresenter` manages UIDatePicker presentation and reacts to changes in it. This class does not depend on interface paradygm, or a way UIDatePicker is presented. UIDatePicker object is created and observed automatically.
  */
-@interface DTDatePickerPresenter : DTBasicPickerPresenter
+@interface DTDatePickerPresenter : NSObject <DTViewPresentation>
 
 /**
  UIDatePicker object to present.
